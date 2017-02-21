@@ -9,35 +9,56 @@ class StyleExamplesController extends Controller
     public function example404()
     {
 
-        return view('style-examples.404-example');
+        return view('style-examples.page-examples.404-example');
 
     }
 
     public function example500()
     {
 
-        return view('style-examples.500-example');
+        return view('style-examples.page-examples.500-example');
 
     }
 
     public function blankPage()
     {
 
-        return view('style-examples.blank-page');
+        return view('style-examples.page-examples.blank-page');
+
+    }
+
+    public function boxed()
+    {
+
+        return view('style-examples.layout-options.boxed');
 
     }
 
     public function buttons()
     {
 
-        return view('style-examples.buttons');
+        return view('style-examples.ui-elements.buttons');
 
     }
 
     public function calendar()
     {
 
-        return view('style-examples.calendar');
+        return view('style-examples.widgets.calendar');
+
+    }
+
+    public function chartsJs()
+    {
+
+        return view('style-examples.charts.charts-js');
+
+    }
+
+    public function collapsedSidebar()
+    {
+
+        return view('style-examples.layout-options.collapsed-sidebar');
 
     }
 
@@ -51,63 +72,98 @@ class StyleExamplesController extends Controller
     public function editors()
     {
 
-        return view('style-examples.editors');
+        return view('style-examples.forms.editors');
+
+    }
+
+    public function fixed()
+    {
+
+        return view('style-examples.layout-options.fixed');
+
+    }
+
+    public function flot()
+    {
+
+        return view('style-examples.charts.flot');
 
     }
 
     public function formsAdvanced()
     {
 
-        return view('style-examples.forms-advanced');
+        return view('style-examples.forms.forms-advanced');
 
     }
 
     public function formExamples()
     {
 
-        return view('style-examples.form-example');
+        return view('style-examples.forms.form-example');
 
     }
 
     public function icons()
     {
 
-        return view('style-examples.icons');
+        return view('style-examples.ui-elements.icons');
+
+    }
+
+    public function inlineCharts()
+    {
+
+        return view('style-examples.charts.inline-charts');
 
     }
 
     public function invoice()
     {
 
-        return view('style-examples.invoice');
+        return view('style-examples.page-examples.invoice');
 
     }
 
     public function lockscreen()
     {
 
-        return view('style-examples.lockscreen');
+        return view('style-examples.page-examples.lockscreen');
 
     }
 
     public function loginExample()
     {
 
-        return view('style-examples.login-example');
+        return view('style-examples.page-examples.login-example');
 
     }
 
     public function mailbox()
     {
 
-        return view('style-examples.mailbox');
+        return view('style-examples.widgets.mailbox');
+
+    }
+
+    public function modals()
+    {
+
+        return view('style-examples.ui-elements.modals');
+
+    }
+
+    public function morris()
+    {
+
+        return view('style-examples.charts.morris');
 
     }
 
     public function pacePage()
     {
 
-        return view('style-examples.pace-page');
+        return view('style-examples.page-examples.pace-page');
 
     }
 
@@ -115,14 +171,14 @@ class StyleExamplesController extends Controller
     public function profileExample()
     {
 
-        return view('style-examples.profile-example');
+        return view('style-examples.page-examples.profile-example');
 
     }
 
     public function registerExample()
     {
 
-        return view('style-examples.register-example');
+        return view('style-examples.page-examples.register-example');
 
     }
 
@@ -131,42 +187,49 @@ class StyleExamplesController extends Controller
 
         $excludeJqueryUi = true;
 
-        return view('style-examples.sliders', compact('excludeJqueryUi'));
+        return view('style-examples.ui-elements.sliders', compact('excludeJqueryUi'));
 
     }
 
     public function tablesData()
     {
 
-        return view('style-examples.tables-data');
+        return view('style-examples.tables.tables-data');
 
     }
 
     public function tablesSimple()
     {
 
-        return view('style-examples.tables-simple');
+        return view('style-examples.tables.tables-simple');
 
     }
 
     public function timeline()
     {
 
-        return view('style-examples.timeline');
+        return view('style-examples.ui-elements.timeline');
+
+    }
+
+    public function topNav()
+    {
+
+        return view('style-examples.layout-options.top-nav');
 
     }
 
     public function uiGeneral()
     {
 
-        return view('style-examples.ui-general');
+        return view('style-examples.ui-elements.ui-general');
 
     }
 
     public function widgets()
     {
 
-        return view('style-examples.widgets');
+        return view('style-examples.widgets.widgets');
 
     }
 

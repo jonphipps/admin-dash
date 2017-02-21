@@ -13,5 +13,12 @@ class AdminController extends Controller
 
     }
 
+    public function adminV2()
+    {
+
+        return view('admin.admin-v2');
+
+    }
+
 
 }
