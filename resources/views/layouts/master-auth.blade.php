@@ -12,6 +12,8 @@
 
     @include('layouts.auth-partials.shiv')
 
+    @include('layouts.window-js')
+
 </head>
 
 <!--

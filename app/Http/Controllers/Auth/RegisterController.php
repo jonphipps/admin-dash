@@ -47,6 +47,9 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+        $data['is_subscribed'] = empty($data['is_subscribed']) ? 0 : 1;
+        $data['terms'] = empty($data['terms']) ? 0 : 1;
+
         return Validator::make($data, [
             'name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
@@ -62,6 +65,8 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $data['is_subscribed'] = empty($data['is_subscribed']) ? 0 : 1;
+
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],

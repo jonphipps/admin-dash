@@ -12,9 +12,11 @@
 
     <div class="content-wrapper">
 
-        <!-- Content Header (Page header) -->
+        <div class="container">
 
-        <section class="content-header container">
+            <!-- Content Header (Page header) -->
+
+            <section class="content-header">
 
 
 
@@ -28,6 +30,7 @@
 
         </section>
 
+        <section class="content">
 
         <div class="register-box">
             <div class="register-logo">
@@ -149,7 +152,11 @@
         </div>
         <!-- /.register-box -->
 
+        </section>
 
+
+
+        </div>
 
     </div>
 

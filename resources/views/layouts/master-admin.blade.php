@@ -12,6 +12,8 @@
 
     @include('layouts.admin-partials.shiv-admin')
 
+    @include('layouts.window-js')
+
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">

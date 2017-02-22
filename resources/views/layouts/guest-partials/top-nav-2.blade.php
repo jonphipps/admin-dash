@@ -1,27 +1,20 @@
-<nav class="navbar navbar-inverse navbar-static-top nav-color">
+<nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
-
-            <div class="navbar-header nav-font">
-
-                <a href="/" class="nav-font"><b>Foundation</b>Maker</a>
-
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
-
-                    <i class="fa fa-bars"></i>
-
-                </button>
-
-            </div>
-
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand logo-size" href="/"><b>Foundation</b> MAKER</a>
+        </div>
         <div id="navbar" class="collapse navbar-collapse pull-right">
-            <div class="navbar-custom-menu">
-            <ul class="nav-right">
-                <li><a href="/login">Login</a></li>
-                <li><a href="/register">Register</a></li>
+            <ul class="nav navbar-nav">
+                <li><a href="/register" ><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                 <li><a href="/auth/facebook"><i class="fa fa-facebook"></i></a></li>
             </ul>
-                </div>
-
         </div><!--/.nav-collapse -->
     </div>
 </nav>

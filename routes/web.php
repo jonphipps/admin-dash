@@ -21,9 +21,23 @@ Route::resource('admin', 'AdminController');
 
 Auth::routes();
 
-Route::get('/login2', 'HomeController@login2');
-
 Route::get('/home', 'HomeController@index');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // examples and docs, delete for production
 

@@ -2,6 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Exceptions\AlreadySyncedException;
+use App\Exceptions\ConnectionNotAcceptedException;
+use App\Exceptions\CredentialsDoNotMatchException;
+use App\Exceptions\EmailAlreadyInSystemException;
+use App\Exceptions\EmailNotProvidedException;
+use App\Exceptions\NoActiveAccountException;
+use App\Exceptions\TransactionFailedException;
+use App\Exceptions\UnauthorizedException;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -13,7 +21,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        //$this->middleware('auth');
+        $this->middleware('auth');
     }
 
     /**
@@ -23,12 +31,9 @@ class HomeController extends Controller
      */
     public function index()
     {
+
         return view('pages.home');
+
     }
 
-    public function login2()
-    {
-
-        return view('auth.login2');
-    }
 }

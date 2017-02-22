@@ -29,11 +29,11 @@
 
     <div class="content-wrapper">
 
-        <!-- Content Header (Page header) -->
+        <div class="container">
 
-        <section class="content-header container">
+            <!-- Content Header (Page header) -->
 
-
+            <section class="content-header">
 
 
             <ol class="breadcrumb">
@@ -44,7 +44,9 @@
 
             </ol>
 
-        </section>
+            </section>
+
+        <section class="content">
 
         <div class="login-box">
             <div class="login-logo">
@@ -137,6 +139,11 @@
             <!-- /.login-box-body -->
         </div>
         <!-- /.login-box -->
+
+        </section>
+
+
+        </div>
 
     </div>
 

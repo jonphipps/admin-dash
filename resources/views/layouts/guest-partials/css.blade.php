@@ -1,5 +1,7 @@
 <!-- Bootstrap 3.3.6 -->
 <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="plugins/jvectormap/jquery-jvectormap-1.2.2.css">
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
 <!-- Ionicons -->
@@ -10,63 +12,72 @@
      folder instead of downloading all of them to reduce the load. -->
 <link rel="stylesheet" href="/dist/css/skins/skin-blue.min.css">
 
+
 <style>
     .body-fill{
 
         background-color: #ecf0f5;
 
+    }
+
+    .error-pad{
+
+        padding-top: 25px;
 
     }
 
-    .nav-color{
+    .pin-pad{
 
+        padding-top: 50px;
+
+    }
+
+    .logo-size{
+        font-size: 20px;
+        color: white;
+    }
+
+    .navbar {
 
         background-color: #3c8dbc;
+        border-color: #3c8dbc;
+
     }
 
-    .nav-font{
+    .navbar-inverse .navbar-brand {
 
-        margin-top: 10px;
         color: white;
-        font-size: 20px;
+        font-size: 30px;
     }
 
-    .nav-right{
-
-        color: white !important;
-        font-size: 15px;
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        display: inline;
-        width: 60px;
-
+    .navbar-inverse .navbar-brand:hover,
+    .navbar-inverse .navbar-brand:focus {
+        color: #333;
     }
-
-    .nav-right ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-
-    }
-
-    .nav-right li {
-        float: left;
-    }
-
-    .nav-right li a {
-        display: block;
+    /* link */
+    .navbar-inverse .navbar-nav > li > a {
         color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
     }
-
-    /* Change the link color to #111 (black) on hover */
-    .nav-right li a:hover {
-        background-color: #111;
+    .navbar-inverse .navbar-nav > li > a:hover,
+    .navbar-inverse .navbar-nav > li > a:focus {
+        color: #333;
     }
-
+    .navbar-inverse .navbar-nav > .active > a,
+    .navbar-inverse .navbar-nav > .active > a:hover,
+    .navbar-inverse .navbar-nav > .active > a:focus {
+        color: #555;
+        background-color: #E7E7E7;
+    }
+    .navbar-inverse .navbar-nav > .open > a,
+    .navbar-inverse .navbar-nav > .open > a:hover,
+    .navbar-inverse .navbar-nav > .open > a:focus {
+        color: #555;
+        background-color: #D5D5D5;
+    }
+    /* caret */
+    .navbar-inverse .navbar-nav > .dropdown > a .caret {
+        border-top-color: #777;
+        border-bottom-color: #777;
+    }
 
 </style>

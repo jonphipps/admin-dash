@@ -12,6 +12,8 @@
 
     @include('layouts.guest-partials.shim')
 
+    @include('layouts.window-js')
+
 
 </head>
 
@@ -21,11 +23,17 @@
 
     @include('layouts.guest-partials.top-nav-2')
 
+    <div class="pin-pad">
+
     @yield('content')
 
     @include('layouts.guest-partials.footer')
 
     @include('layouts.guest-partials.scripts')
+
+    @yield('scripts')
+
+    </div>
 
 
 

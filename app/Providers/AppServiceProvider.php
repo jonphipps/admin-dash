@@ -13,7 +13,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $value = \App\Utilities\Copyright::displayNotice();
+
+        view()->share('copyright', $value);
     }
 
     /**

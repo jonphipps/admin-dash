@@ -8,12 +8,11 @@
 require('./bootstrap');
 
 /**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
+ * We will require in our components.js file, which contains our component
+ * files.  Putting them in their own file reduces clutter.
  */
 
-Vue.component('example', require('./components/Example.vue'));
+require('./components');
 
 const app = new Vue({
     el: '#app'
