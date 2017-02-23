@@ -1,6 +1,18 @@
 <template>
     <div>
         <div class="row">
+
+            <div class="pull-left"> <a v-bind:href="$parent.createUrl">
+
+                <button type="button" class="btn btn-lg btn-primary grid-results">
+
+                    Create New
+
+                </button>
+
+            </a>
+
+            </div>
             <div class="pull-right for-page-button">
 
                 <button @click="$parent.getData($parent.go_to_page)"class="btn btn-default">

@@ -1,28 +1,37 @@
-@extends('layouts.master')
+@extends('layouts.master-auth')
 
-@section('title')
-
-    <title>Marketing Images</title>
-
-@endsection
 
 @section('content')
 
-    <ol class='breadcrumb'>
-        <li><a href='/'>Home</a></li>
-        <li class='active'>Marketing Images</li>
-    </ol>
+    <div class="content-wrapper">
 
-    <h2>Marketing Images</h2>
+        <!-- Content Header (Page header) -->
 
-    <hr/>
+        <section class="content-header">
 
-    <marketing-image-grid></marketing-image-grid>
 
-    <div> <a href="/marketing-image/create">
-            <button type="button" class="btn btn-lg btn-primary">
-                Create New
-            </button></a>
+            <ol class="breadcrumb">
+
+                <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li><a href="/marketing-image">Marketing Images</a></li>
+                <li class="active">Marketing Images</li>
+
+            </ol>
+
+        </section>
+<!-- Main content -->
+<section class="content">
+    <div class="container">
+    <div class="row">
+
+        <marketing-image-grid></marketing-image-grid>
+
     </div>
+    </div>
+    <!-- /.row -->
+</section>
+<!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
 
 @endsection

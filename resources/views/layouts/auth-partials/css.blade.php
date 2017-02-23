@@ -11,3 +11,6 @@
       apply the skin class to the body tag so the changes take effect.
 -->
 <link rel="stylesheet" href="/dist/css/skins/skin-blue.min.css">
+
+<!-- Custom Styles -->
+<link rel="stylesheet" href="{{ mix('/css/main.css') }}">

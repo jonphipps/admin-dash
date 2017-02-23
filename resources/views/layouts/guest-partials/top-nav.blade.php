@@ -1,78 +1,37 @@
-<header class="main-header">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
 
-    <!-- if you want to pin the nav, use fixed instead of static -->
+            @if(! Auth::check())
 
-    <nav class="navbar navbar-static-top">
+            <a class="navbar-brand logo-size" href="/"><b>Foundation</b> MAKER</a>
 
-        <div class="container">
+            @else
 
-            <div class="navbar-header">
+            <a class="navbar-brand logo-size" href="/home"><b>Foundation</b> MAKER</a>
 
-                <a href="/" class="navbar-brand"><b>Foundation</b>Maker</a>
-
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
-
-                    <i class="fa fa-bars"></i>
-
-                </button>
-
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
-
-            <!-- uncomment the following to add links and add @ sign in front of statement
-
-                 include('layouts.guest-partials.optional-links')
-            -->
-
-            </div>
-
-            <!-- /.navbar-collapse -->
-
-            <!-- Navbar Right Menu -->
-
-            <div class="navbar-custom-menu">
-
-                <ul class="nav navbar-nav">
-
-                    <li>
-
-                        <a href="/login">
-
-                             Login
-                        </a>
-
-                    </li>
-
-                    <li>
-
-                        <a href="/register">
-
-                            Register
-                        </a>
-
-                    </li>
-
-                    <li>
-
-                        <a href="/auth/facebook">
-
-                        <i class="fa fa-facebook"></i>
-
-                        </a>
-
-                    </li>
-
-                </ul>
-
-            </div>
-
-            <!-- /.navbar-custom-menu -->
+            @endif
 
         </div>
-        <!-- /.container-fluid -->
+        <div id="navbar" class="collapse navbar-collapse pull-right">
+            <ul class="nav navbar-nav">
 
-    </nav>
+                @if(! Auth::check())
 
-</header>
+                <li><a href="/register" ><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <li><a href="/auth/facebook"><i class="fa fa-facebook"></i></a></li>
+
+
+                @endif
+
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>

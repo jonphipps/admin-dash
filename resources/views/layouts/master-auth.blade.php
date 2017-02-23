@@ -37,8 +37,8 @@ desired effect
 |---------------------------------------------------------|
 -->
 <body class="hold-transition skin-blue sidebar-mini">
-
-<div class="wrapper">
+<div id="app">
+    <div class="wrapper">
 
     @include('layouts.auth-partials.top-nav')
 
@@ -50,11 +50,14 @@ desired effect
 
     @include('layouts.auth-partials.footer')
 
+</div>
+
+</div>
+
     @include('layouts.auth-partials.scripts')
 
     @yield('scripts')
 
-</div>
 
 </body>
 </html>

@@ -4,22 +4,11 @@
 
         <div class="col-lg-12">
 
-            <form id="search">
+            <h1>Widgets</h1>
 
-                   Search
+            <search-box></search-box>
 
-                <input name="query"
-                       v-model="query"
-                       @keyup="search(query)"
-                       class="search-box">
-
-            </form>
-
-            <div class="pull-right">
-
-                {{ total }} Total Results
-
-            </div>
+            <grid-count></grid-count>
 
             <section class="panel">
 
@@ -27,28 +16,10 @@
 
                     <table class="table table-bordered table-striped">
 
-                        <thead>
-                        <tr>
-                            <th v-for="key in gridColumns"
-                                @click="sortBy(key)"
-                                v-bind:class="{active: sortKey == key}">
-
-                                {{ key }}
-
-                                <span class="arrow"
-
-                                      v-bind:class="sortOrder > 0 ? 'asc' : 'dsc'">
-
-                                </span>
-
-                            </th>
-
-                            <th>Actions</th>
-
-                        </tr>
-                        </thead>
+                        <table-head></table-head>
 
                         <tbody>
+
                         <tr v-for="row in gridData">
 
                             <td>
@@ -69,7 +40,9 @@
 
                             </td>
 
-                            <td ><a v-bind:href="'/widget/' + row.Id + '/edit'">
+                            <td >
+
+                                <a v-bind:href="'/widget/' + row.Id + '/edit'">
 
                                 <button type="button" class="btn btn-default">
 
@@ -78,20 +51,18 @@
                                 </button>
 
                                 </a>
+
                             </td>
 
                         </tr>
+
                         </tbody>
 
                     </table>
 
                 </div>
 
-                <div class="pull-right">
-
-                    page {{ current_page }} of   {{ last_page }} pages
-
-                </div>
+                <page-number></page-number>
 
             </section>
 
@@ -110,7 +81,11 @@
 
     export default {
 
-        components: {'pagination' : require('./Pagination')},
+        components: {'pagination' : require('./Pagination'),
+                     'search-box' : require('./SearchBox'),
+                     'grid-count' : require('./GridCount'),
+                     'page-number' : require('./PageNumber'),
+                     'table-head' : require('./TableHead')},
 
         mounted: function () {
 
@@ -132,7 +107,8 @@
                 last_page_url: null,
                 go_to_page: null,
                 sortOrder: 1,
-                sortKey: ''
+                sortKey: '',
+                createUrl: '/widget/create'
             }
         },
 

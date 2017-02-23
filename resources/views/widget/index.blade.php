@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.master-guest')
 
 @section('title')
 
@@ -6,28 +6,40 @@
 
 @endsection
 
+
 @section('content')
 
-    <ol class='breadcrumb'>
-        <li><a href='/'>Home</a></li>
-        <li class='active'>Widgets</li>
-    </ol>
+    <!-- Content Wrapper. Contains page content -->
 
-    <h2>Widgets</h2>
+    <div class="content-wrapper">
 
-    <hr/>
+        <!-- Content Header (Page header) -->
+
+        <section class="container">
+
+            <!-- Content Header (Page header) -->
+
+            <section class="content-header">
+
+
+                <ol class="breadcrumb">
+
+                    <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
+                    <li><a href="/widget">Widget</a></li>
+                    <li class="active">Widgets</li>
+
+                </ol>
+
+            </section>
+
+            <section class="content">
 
     <data-extracted-sample></data-extracted-sample>
 
-    <div> <a href="/widget/create">
 
-            <button type="button" class="btn btn-lg btn-primary">
+            </section>
 
-                    Create New
-
-            </button>
-
-          </a>
+        </section>
 
     </div>
 

@@ -12,6 +12,8 @@
      folder instead of downloading all of them to reduce the load. -->
 <link rel="stylesheet" href="/dist/css/skins/skin-blue.min.css">
 
+<link rel="stylesheet" href="{{ mix('/css/main.css') }}">
+
 
 <style>
     .body-fill{
@@ -79,5 +81,6 @@
         border-top-color: #777;
         border-bottom-color: #777;
     }
+
 
 </style>

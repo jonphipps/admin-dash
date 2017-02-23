@@ -21,24 +21,27 @@
 
 <div class="body-fill">
 
-    @include('layouts.guest-partials.top-nav-2')
+    <div id="app">
 
-    <div class="pin-pad">
+    @include('layouts.guest-partials.top-nav')
+
+        <div class="pin-pad">
 
     @yield('content')
 
     @include('layouts.guest-partials.footer')
 
+
+
+        </div>
+
+    </div>
+
     @include('layouts.guest-partials.scripts')
 
     @yield('scripts')
 
-    </div>
-
-
-
 </div>
-
 
 </body>
 

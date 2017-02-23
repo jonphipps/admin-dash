@@ -32,10 +32,14 @@
         <ul class="sidebar-menu">
             <li class="header">HEADER</li>
             <!-- Optionally, you can add icons to the links -->
-            <li class="active"><a href="#"><i class="fa fa-link"></i> <span>Link</span></a></li>
-            <li><a href="#"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
+            @if(Auth::user()->isAdmin())
+            <li><a href="/admin"><i class="fa fa-dashboard"></i>
+                     <span>Admin</span></a></li>
+            @endif
+            <li><a href="/determine-profile-route"><i class="fa fa-user"></i> <span>Profile</span></a></li>
+            <li><a href="/settings"><i class="fa fa-wrench"></i> <span>Account Settings</span></a></li>
             <li class="treeview">
-                <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
+                <a href="#"><i class="fa fa-archive"></i> <span>Content</span>
                     <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>

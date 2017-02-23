@@ -20,6 +20,8 @@
 
 <div class="wrapper">
 
+    <div id="app">
+
     @include('layouts.admin-partials.top-nav-admin')
 
     @include('layouts.admin-partials.left-nav-admin')
@@ -30,11 +32,15 @@
 
     @include('layouts.admin-partials.footer-admin')
 
+
+
+    </div>
+
+</div>
+
     @include('layouts.admin-partials.scripts-admin')
 
     @yield('scripts')
-
-</div>
 
 </body>
 </html>

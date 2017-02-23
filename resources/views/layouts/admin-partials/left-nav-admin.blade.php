@@ -27,7 +27,7 @@
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu">
             <li class="header">MAIN NAVIGATION</li>
-            <li class="active treeview">
+            <li class="">
                 <a href="#">
                     <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                     <span class="pull-right-container">
@@ -35,8 +35,9 @@
             </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li class="active"><a href="/admin"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
+                    <li><a href="/admin"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
                     <li><a href="/admin-v2"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
+                    <li><a href="/home"><i class="fa fa-circle-o"></i> Site Home</a></li>
                 </ul>
             </li>
             <li class="treeview">
@@ -55,7 +56,7 @@
                 </ul>
             </li>
             <li>
-                <a href="/widgets">
+                <a href="/widgets-examples">
                     <i class="fa fa-th"></i> <span>Widgets</span>
                     <span class="pull-right-container">
               <small class="label pull-right bg-green">new</small>

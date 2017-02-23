@@ -16,7 +16,7 @@
             <section class="content-header">
                 <h1>
                     Free Template
-                    <small>Example 2.0</small>
+                    <small>For Laravel 5.4</small>
                 </h1>
                 <ol class="breadcrumb">
                     <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>

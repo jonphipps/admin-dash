@@ -9,3 +9,6 @@
      folder instead of downloading all of them to reduce the load. -->
 <link rel="stylesheet" href="/dist/css/skins/skin-blue.min.css">
 
+<!-- Custom Styles -->
+<link rel="stylesheet" href="{{ mix('/css/main.css') }}">
+

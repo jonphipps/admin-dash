@@ -1,12 +1,17 @@
 <template>
     <div class="row">
         <div class="col-lg-12">
+            <h1>Widgets</h1>
             <form id="search">
                 Search <input name="query" v-model="query" @keyup="search(query)">
             </form>
+
             <div class="pull-right">
+
                 {{ total }} Total Results
+
             </div>
+
             <section class="panel">
                 <div class="panel-body">
 
@@ -229,3 +234,5 @@
         }
     }
 </script>
+
+
