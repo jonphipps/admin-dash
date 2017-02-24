@@ -19,4 +19,11 @@ class PagesController extends Controller
         return view('pages.terms');
 
     }
+
+    public function privacy()
+    {
+
+        return view('pages.privacy');
+
+    }
 }

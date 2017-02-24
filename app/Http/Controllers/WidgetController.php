@@ -66,8 +66,6 @@ class WidgetController extends Controller
 
         $widget->save();
 
-        alert()->success('Congrats!', 'You made a Widget');
-
         return Redirect::route('widget.index');
 
     }
@@ -136,8 +134,6 @@ class WidgetController extends Controller
                          'slug' => $slug,
                          'user_id' => Auth::id()]);
 
-        alert()->success('Congrats!', 'You updated a widget');
-
         return Redirect::route('widget.show', ['widget' => $widget, 'slug' =>$slug]);
 
     }
@@ -153,8 +149,6 @@ class WidgetController extends Controller
     {
 
         Widget::destroy($id);
-
-        alert()->overlay('Attention!', 'You deleted a widget', 'error');
 
         return Redirect::route('widget.index');
 

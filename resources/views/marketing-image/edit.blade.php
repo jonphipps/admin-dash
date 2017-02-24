@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.master-admin')
 
 @section('title')
 
@@ -8,31 +8,39 @@
 
 @section('content')
 
-    <ol class='breadcrumb'>
-        <li><a href='/'>Home</a></li>
-        <li><a href='/marketing-image'>Marketing Images</a></li>
-        <li><a href='/marketing-image/{{ $marketingImage->id }}'>{{ $marketingImage->image_name }}</a></li>
-        <li class='active'>Edit</li>
-    </ol>
+    <div class="content-wrapper">
 
-    <h2>Update Image</h2>
+        <div class="container">
 
-    <hr/>
+            <!-- Content Header (Page header) -->
 
-    <!-- delete button -->
+            <section class="content-header">
 
-    <div class="form-group pull-right">
 
-        <form class="form" role="form" method="POST" action="{{ url('/marketing-image/'. $marketingImage->id) }}">
-            <input type="hidden" name="_method" value="delete">
-            {{ csrf_field() }}
+                <ol class="breadcrumb">
 
-            <input class="btn btn-danger" Onclick="return ConfirmDelete();" type="submit" value="Delete">
+                    <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
+                    <li><a href="/marketing-image">Marketing Images</a></li>
+                    <li class="active">Marketing Images</li>
 
-        </form>
-    </div>
+                </ol>
 
-    <!-- image name no input -->
+            </section>
+
+            <!-- Main content -->
+            <section class="content">
+                <div class="container">
+                    <div class="row">
+
+                        <div class ="col-xs-4">
+
+                        <h1>Edit Image</h1>
+
+
+
+
+    <!-- image name no input allowed -->
+
     <div>
 
         <div class="control-label">
@@ -41,8 +49,8 @@
         </div>
 
         <h4>{{ $marketingImage->image_name
-                   . '.' .
-                   $marketingImage->image_extension }}
+               . '.'
+               . $marketingImage->image_extension }}
         </h4>
 
     </div>
@@ -56,6 +64,8 @@
     </div>
 
     <br>
+
+
 
     <form class="form" role="form" method="POST"
           action="{{ url('/marketing-image/' . $marketingImage->id) }}"
@@ -164,9 +174,31 @@
                 </button>
 
             </div>
+
+            <form class="form" role="form" method="POST" action="{{ url('/marketing-image/'. $marketingImage->id) }}">
+                <input type="hidden" name="_method" value="delete">
+                {{ csrf_field() }}
+
+                <button class="btn btn-danger btn-lg" Onclick="return ConfirmDelete();" type="submit">
+                    Delete
+                    </button>
+
+            </form>
+
+
         </div>
 
     </form>
+
+    </div>
+
+    </div>
+    </div>
+
+    </section>
+
+       </div>
+    </div>
 
 @endsection
 

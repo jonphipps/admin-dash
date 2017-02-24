@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.master-admin')
 
 @section('title')
 
@@ -8,23 +8,33 @@
 
 @section('content')
 
-    <ol class='breadcrumb'>
-        <li><a href='/'>Home</a></li>
-        <li><a href='/marketing-image'>Marketing Images</a></li>
-        <li><a href='/marketing-image/{{ $marketingImage->id }}'>{{ $marketingImage->image_name }}</a></li>
-    </ol>
+    <div class="content-wrapper">
 
-    <h1>{{ $marketingImage->image_name }} Marketing Image</h1>
+        <div class="container">
 
-    <div class="pull-left">
+            <!-- Content Header (Page header) -->
+
+            <section class="content-header">
 
 
-        <a href="/marketing-image/{{ $marketingImage->id }}/edit">
+                <ol class="breadcrumb">
 
-            <button type="button" class="btn btn-primary btn-lg">Edit Image</button></a>
+                    <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
+                    <li><a href="/marketing-image">Marketing Images</a></li>
+                    <li class="active">{{ $marketingImage->image_name }}</li>
 
-    </div>
-    <br><br>
+                </ol>
+
+            </section>
+
+            <!-- Main content -->
+            <section class="content">
+                <div class="container">
+                    <div class="row">
+
+    <h1>Marketing Image -- {{ $marketingImage->image_name }}</h1>
+
+
 
     <hr/>
 
@@ -103,13 +113,22 @@
             <tr>
                 <td>
 
-                    <div class="form-group pull-left">
+                    <div class="pull-left">
+
+
+                        <a href="/marketing-image/{{ $marketingImage->id }}/edit">
+
+                            <button type="button" class="btn btn-primary btn-lg">Edit Image</button></a>
+                       <br>
+                        <br>
 
                         <form class="form" role="form" method="POST" action="{{ url('/marketing-image/'. $marketingImage->id) }}">
                             <input type="hidden" name="_method" value="delete">
                             {{ csrf_field() }}
 
-                            <input class="btn btn-danger" Onclick="return ConfirmDelete();" type="submit" value="Delete">
+                            <button class="btn btn-danger btn-lg" Onclick="return ConfirmDelete();" type="submit">
+                                Delete
+                                </button>
 
                         </form>
                     </div>
@@ -121,6 +140,12 @@
         </table>
 
     </div>
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
 
 @endsection
 @section('scripts')

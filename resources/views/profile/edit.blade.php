@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.master-auth')
 
 @section('title')
 
@@ -8,127 +8,151 @@
 
 @section('content')
 
-    @if(Auth::user()->isAdmin())
+    <div class="content-wrapper">
 
-        <ol class='breadcrumb'>
-            <li><a href='/'>Home</a></li>
-            <li><a href='/profile'>Profiles</a></li>
-            <li><a href='/profile/{{ $profile->id }}'>{{ $profile->fullName() }}</a></li>
-        </ol>
+        <div class="container">
 
-    @else
+            <!-- Content Header (Page header) -->
 
-        <ol class='breadcrumb'>
-            <li><a href='/'>Home</a></li>
-            <li><a href='/profile/{{ $profile->id }}'>{{ $profile->fullName() }}</a></li>
-        </ol>
+            <section class="content-header">
 
-    @endif
+                <ol class="breadcrumb">
 
-    <h2>Edit Your Profile</h2>
+                    <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
+                    <li><a href='/determine-route-to-profile/'>{{ $profile->fullName() }}</a></li>
+                    <li class="active">Create Profile</li>
 
-    <hr/>
+                </ol>
 
-    <form class="form" role="form" method="POST" action="{{ url('/profile/'. $profile->id) }}">
+            </section>
 
-        <input type="hidden" name="_method" value="patch">
+            <!-- Main content -->
+            <section class="content">
 
-    {{ csrf_field() }}
+                <div class="container">
 
-    <!-- first_name Form Input -->
+                    <div class="row">
 
-        <div class="form-group{{ $errors->has('first_name') ? ' has-error' : '' }}">
+                        <div class="col-xs-4">
 
-            <label class="control-label">First Name</label>
+                            <h1>Edit Profile</h1>
 
-            <input type="text" class="form-control" name="first_name" value="{{ $profile->first_name }}">
+                            <hr/>
 
-            @if ($errors->has('first_name'))
+                            <form class="form" role="form" method="POST" action="{{ url('/profile/'. $profile->id) }}">
 
-                <span class="help-block">
-                <strong>{{ $errors->first('first_name') }}</strong>
-                </span>
+                                <input type="hidden" name="_method" value="patch">
 
-            @endif
+                            {{ csrf_field() }}
+
+                            <!-- first_name Form Input -->
+
+                                <div class="form-group{{ $errors->has('first_name') ? ' has-error' : '' }}">
+
+                                    <label class="control-label">First Name</label>
+
+                                    <input type="text" class="form-control" name="first_name"
+                                           value="{{ $profile->first_name }}">
+
+                                    @if ($errors->has('first_name'))
+
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('first_name') }}</strong>
+                                        </span>
+
+                                    @endif
+
+                                </div>
+
+                                <!-- last_name Form Input -->
+
+                                <div class="form-group{{ $errors->has('last_name') ? ' has-error' : '' }}">
+
+                                    <label class="control-label">Last Name</label>
+
+                                    <input type="text" class="form-control" name="last_name"
+                                           value="{{  $profile->last_name }}">
+
+                                    @if ($errors->has('last_name'))
+
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('last_name') }}</strong>
+                                        </span>
+
+                                    @endif
+
+                                </div>
+
+                                <!-- birthdate Form Input -->
+
+                                <div class="form-group{{ $errors->has('birthdate') ? ' has-error' : '' }}">
+
+                                    <label class="control-label">Birthdate</label>
+
+                                    <div>
+
+                                        {{  Form::date('birthdate', $profile->birthdate) }}
+
+                                    </div>
+
+
+                                    @if ($errors->has('birthdate'))
+
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('birthdate') }}</strong>
+                                        </span>
+
+                                    @endif
+
+                                </div>
+
+                                <!-- Gender Form Input -->
+
+                                <div class="form-group{{ $errors->has('gender') ? ' has-error' : '' }}">
+
+                                    <label class="control-label">Gender</label>
+
+
+                                    <select class="form-control" id="gender" name="gender">
+                                        <option value="{{ $profile->gender }}">{{ $profile->showGender($profile->gender) }}</option>
+                                        <option value="1">Male</option>
+                                        <option value="0">Female</option>
+                                    </select>
+
+
+                                    @if ($errors->has('gender'))
+
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('gender') }}</strong>
+                                        </span>
+
+                                    @endif
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <button type="submit" class="btn btn-primary btn-lg">
+
+                                        Update
+
+                                    </button>
+
+                                </div>
+
+                            </form>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
 
         </div>
 
-        <!-- last_name Form Input -->
-
-        <div class="form-group{{ $errors->has('last_name') ? ' has-error' : '' }}">
-
-            <label class="control-label">Last Name</label>
-
-            <input type="text" class="form-control" name="last_name" value="{{  $profile->last_name }}">
-
-            @if ($errors->has('last_name'))
-
-                <span class="help-block">
-                <strong>{{ $errors->first('last_name') }}</strong>
-                </span>
-
-            @endif
-
-        </div>
-
-        <!-- birthdate Form Input -->
-
-        <div class="form-group{{ $errors->has('birthdate') ? ' has-error' : '' }}">
-
-            <label class="control-label">Birthdate</label>
-
-            <div>
-
-                {{  Form::date('birthdate', $profile->birthdate) }}
-
-            </div>
-
-
-            @if ($errors->has('birthdate'))
-
-                <span class="help-block">
-                <strong>{{ $errors->first('birthdate') }}</strong>
-                </span>
-
-            @endif
-
-        </div>
-
-        <!-- Gender Form Input -->
-
-        <div class="form-group{{ $errors->has('gender') ? ' has-error' : '' }}">
-
-            <label class="control-label">Gender</label>
-
-
-            <select class="form-control" id="gender" name="gender">
-                <option value="{{ $profile->gender }}">{{ $profile->showGender($profile->gender) }}</option>
-                <option value="1">Male</option>
-                <option value="0">Female</option>
-            </select>
-
-
-            @if ($errors->has('gender'))
-
-                <span class="help-block">
-                <strong>{{ $errors->first('gender') }}</strong>
-                </span>
-
-            @endif
-
-        </div>
-
-
-        <div class="form-group">
-
-            <button type="submit" class="btn btn-primary btn-lg">
-
-                Update
-
-            </button>
-
-        </div>
-
-    </form>
+    </div>
 
 @endsection

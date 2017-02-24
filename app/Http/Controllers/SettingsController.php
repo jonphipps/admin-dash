@@ -60,8 +60,6 @@ class SettingsController extends Controller
                        'email' => $request->email,
                        'is_subscribed' => $request->is_subscribed]);
 
-        alert()->success('Congrats!', 'You updated your user settings');
-
         return redirect()->action('SettingsController@edit', [$user]);
 
     }

@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.master-auth')
 
 @section('title')
 
@@ -8,103 +8,132 @@
 
 @section('content')
 
-    <ol class='breadcrumb'>
-        <li><a href='/'>Home</a></li>
-        <li>Settings</li>
-    </ol>
+    <div class="content-wrapper">
+
+        <div class="container">
+
+            <!-- Content Header (Page header) -->
+
+            <section class="content-header">
 
 
-    <div class="pull-right">
+                <ol class="breadcrumb">
 
-        <a href="{{ url('/password/reset') }}">
+                    <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
+                    <li><a href="/settings">Settings</a></li>
+                    <li class="active">Settings</li>
 
-            <button type="button" class="btn btn-lg btn-primary">
+                </ol>
 
-                Reset Password
+            </section>
 
-            </button>
+            <!-- Main content -->
+            <section class="content">
+                <div class="container">
+                    <div class="row">
 
-        </a>
-
-    </div>
-
-    <h1 class="myTableFont">Update {{ $user->name }}</h1>
-
-    <hr/>
+                        <div class="col-xs-4">
 
 
-    <form class="form" role="form" method="POST" action="{{ url('/settings') }}">
+                            <h1 class="myTableFont">Update {{ $user->name }}</h1>
 
-    {{ csrf_field() }}
+                            <form class="form" role="form" method="POST" action="{{ url('/settings') }}">
 
-    <!-- name Form Input -->
+                            {{ csrf_field() }}
 
-        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+                            <!-- name Form Input -->
 
-            <label class="control-label">User Name</label>
+                                <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
 
-            <input type="text" class="form-control" name="name" value="{{ $user->name }}">
+                                    <label class="control-label">User Name</label>
 
-            @if ($errors->has('name'))
+                                    <input type="text" class="form-control" name="name" value="{{ $user->name }}">
 
-                <span class="help-block">
-                <strong>{{ $errors->first('name') }}</strong>
-                </span>
+                                    @if ($errors->has('name'))
 
-            @endif
+                                        <span class="help-block">
+                                                <strong>{{ $errors->first('name') }}</strong>
+                                        </span>
 
-        </div>
+                                    @endif
 
-        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-            <label for="email" class="control-label">E-Mail Address</label>
+                                </div>
 
-            <div>
-                <input id="email" type="email" class="form-control" name="email" value="{{ $user->email }}">
+                                <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                                    <label for="email" class="control-label">E-Mail Address</label>
 
-                @if ($errors->has('email'))
-                    <span class="help-block">
+                                    <div>
+                                        <input id="email" type="email" class="form-control" name="email"
+                                               value="{{ $user->email }}">
+
+                                        @if ($errors->has('email'))
+                                            <span class="help-block">
                                         <strong>{{ $errors->first('email') }}</strong>
                                     </span>
-                @endif
-            </div>
+                                        @endif
+                                    </div>
+                                </div>
+
+                                <!-- is_subscribed Form Input -->
+
+                                <div class="form-group{{ $errors->has('is_subscribed') ? ' has-error' : '' }}">
+
+                                    <label class="control-label">Is Subscribed?</label>
+
+
+                                    <select class="form-control" id="is_subscribed" name="is_subscribed">
+                                        <option value="{{ $user->is_subscribed }}">{{ $user->is_subscribed == 1 ? 'Yes' : 'No' }}</option>
+                                        <option value="1">Yes</option>
+                                        <option value="0">No</option>
+                                    </select>
+
+
+                                    @if ($errors->has('is_subscribed'))
+
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('is_subscribed') }}</strong>
+                                        </span>
+
+                                    @endif
+
+                                </div>
+
+                                <div class="form-group">
+
+                                    <button type="submit" class="btn btn-primary btn-lg">
+
+                                        Update
+
+                                    </button>
+
+                                </div>
+
+                                <div class="pull-left">
+
+                                    <a href="{{ url('/password/reset') }}">
+
+                                        <button type="button" class="btn btn-lg btn-warning">
+
+                                            Reset Password
+
+                                        </button>
+
+                                    </a>
+
+                                </div>
+
+                            </form>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
         </div>
 
-        <!-- is_subscribed Form Input -->
-
-        <div class="form-group{{ $errors->has('is_subscribed') ? ' has-error' : '' }}">
-
-            <label class="control-label">Is Subscribed?</label>
-
-
-            <select class="form-control" id="is_subscribed" name="is_subscribed">
-                <option value="{{ $user->is_subscribed }}">{{ $user->is_subscribed == 1 ? 'Yes' : 'No' }}</option>
-                <option value="1">Yes</option>
-                <option value="0">No</option>
-            </select>
-
-
-            @if ($errors->has('is_subscribed'))
-
-                <span class="help-block">
-                <strong>{{ $errors->first('is_subscribed') }}</strong>
-                </span>
-
-            @endif
-
-        </div>
-
-        <div class="form-group">
-
-            <button type="submit" class="btn btn-primary btn-lg">
-
-                Update
-
-            </button>
-
-        </div>
-
-    </form>
-
-
+    </div>
 
 @endsection

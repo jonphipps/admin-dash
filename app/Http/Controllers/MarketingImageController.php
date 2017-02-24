@@ -76,8 +76,6 @@ class MarketingImageController extends Controller
         // pass in the file and the model
         $this->saveImageFiles($file, $marketingImage);
 
-        alert()->success('Congrats!', 'Marketing Image And Thumbnail Created!');
-
         return redirect()->route('marketing-image.show', [$marketingImage]);
 
     }
@@ -158,8 +156,6 @@ class MarketingImageController extends Controller
 
         $imagePath = $this->imagePath;
 
-        alert()->success('Congrats!', 'image edited!');
-
         return view('marketing-image.show', compact('marketingImage', 'thumbnailPath', 'imagePath'));
 
     }
@@ -179,8 +175,6 @@ class MarketingImageController extends Controller
         $this->deleteExistingImages($marketingImage);
 
         MarketingImage::destroy($id);
-
-        alert()->error('Notice', 'image deleted!');
 
         return redirect()->route('marketing-image.index');
 

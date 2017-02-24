@@ -1,4 +1,4 @@
-@extends('layouts.master-auth')
+@extends('layouts.master-admin')
 
 
 @section('content')
@@ -19,6 +19,7 @@
             </ol>
 
         </section>
+
 <!-- Main content -->
 <section class="content">
     <div class="container">

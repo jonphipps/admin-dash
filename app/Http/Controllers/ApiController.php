@@ -23,5 +23,12 @@ class ApiController extends Controller
         return GridQuery::sendData($request, new MarketingImageQuery);
     }
 
+    public function userData(Request $request)
+    {
+
+        return GridQuery::sendData($request, new UserQuery);
+
+    }
+
 
 }

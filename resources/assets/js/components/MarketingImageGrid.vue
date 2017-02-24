@@ -78,7 +78,7 @@
 
         mounted: function () {
 
-            gridData.loadData('api/widget-data', this);
+            gridData.loadData('api/marketing-image-data', this);
 
         },
         data: function () {
@@ -102,6 +102,10 @@
         },
         methods: {
 
+            convertBoolean: function (value){
+                return value == 1 ? 'Yes' : 'No';
+            },
+
             sortBy: function (key){
                 this.sortKey = key;
                 this.sortOrder = (this.sortOrder == 1) ? -1 : 1;
@@ -115,7 +119,7 @@
 
             getData:  function(request){
 
-                gridData.getQueryData(request, 'api/widget-data', this);
+                gridData.getQueryData(request, 'api/marketing-image-data', this);
 
             },
 

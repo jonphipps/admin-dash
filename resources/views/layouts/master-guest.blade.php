@@ -21,6 +21,8 @@
 
 <div class="body-fill">
 
+    @include('layouts.guest-partials.facebook')
+
     <div id="app">
 
     @include('layouts.guest-partials.top-nav')

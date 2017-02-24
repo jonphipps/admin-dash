@@ -9,7 +9,7 @@ You have joined our site and now have access to the following benefits:
 * 24/7 support
 * updated daily content
 
-@component('mail::button', ['url' => 'http://www.sample-project.com'])
+@component('mail::button', ['url' => 'http://www.admin-test.com'])
 Visit Now
 @endcomponent
 

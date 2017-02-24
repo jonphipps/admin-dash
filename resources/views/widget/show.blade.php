@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.master-guest')
 
 @section('title')
 
@@ -8,11 +8,30 @@
 
 @section('content')
 
-    <ol class='breadcrumb'>
-        <li><a href='/'>Home</a></li>
-        <li><a href='/widget'>Widgets</a></li>
-        <li><a href='/widget/{{ $widget->id }}'>{{ $widget->name }}</a></li>
-    </ol>
+    <!-- Content Wrapper. Contains page content -->
+
+    <div class="content-wrapper">
+
+        <!-- Content Header (Page header) -->
+
+        <section class="container">
+
+            <!-- Content Header (Page header) -->
+
+            <section class="content-header">
+
+
+                <ol class="breadcrumb">
+
+                    <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
+                    <li><a href="/widget">Widgets</a></li>
+                    <li class="active">Create Widget</li>
+
+                </ol>
+
+            </section>
+
+            <section class="content">
 
     <h1>{{ $widget->name }}</h1>
 
@@ -90,6 +109,10 @@
 
 
     </div>
+
+                </section>
+            </section>
+        </div>
 
 @endsection
 

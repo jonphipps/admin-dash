@@ -14,6 +14,15 @@
             <!-- Content Header (Page header) -->
 
             <section class="content-header">
+
+                <div class="grid-results">
+                <div
+                        class="fb-like"
+                        data-share="true"
+                        data-width="450"
+                        data-show-faces="true">
+                </div>
+                </div>
                 <h1>
                     Free Template
                     <small>For Laravel 5.4</small>

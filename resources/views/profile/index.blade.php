@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.master-admin')
 
 @section('title')
 
@@ -8,14 +8,34 @@
 
 @section('content')
 
-    <ol class='breadcrumb'>
-        <li><a href='/'>Home</a></li>
-        <li class='active'>Profiles</li>
-    </ol>
+    <div class="content-wrapper">
 
-    <h2>Profiles</h2>
+        <div class="container">
 
-    <hr/>
+            <!-- Content Header (Page header) -->
+
+            <section class="content-header">
+
+                <ol class="breadcrumb">
+
+                    <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
+                    <li><a href="/profiles">Profiles</a></li>
+                    <li class="active">Profiles</li>
+
+                </ol>
+
+            </section>
+
+            <!-- Main content -->
+            <section class="content">
+
+                <div class="container">
+
+                    <div class="row">
+
+                        <div class="col-xs-8">
+
+                            <h1 class="myTableFont">Profiles</h1>
 
     @if($profiles->count() > 0)
 
@@ -55,6 +75,18 @@
     @endif
 
     {{ $profiles->links() }}
+
+    </div>
+
+    </div>
+
+    </div>
+
+    </section>
+
+    </div>
+
+    </div>
 
 
 

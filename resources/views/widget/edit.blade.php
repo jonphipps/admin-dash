@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.master-guest')
 
 @section('title')
 
@@ -9,17 +9,34 @@
 @section('content')
 
 
-    <ol class='breadcrumb'>
-        <li><a href='/'>Home</a></li>
-        <li><a href='/widget'>Widgets</a></li>
-        <li><a href='/widget/{{$widget->id}}'>{{$widget->name}}</a></li>
-        <li class='active'>Edit</li>
-    </ol>
+    <!-- Content Wrapper. Contains page content -->
 
-    <h1>Edit Widget</h1>
+    <div class="content-wrapper">
 
-    <hr/>
+        <!-- Content Header (Page header) -->
 
+        <section class="container">
+
+            <!-- Content Header (Page header) -->
+
+            <section class="content-header">
+
+
+                <ol class="breadcrumb">
+
+                    <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
+                    <li><a href="/widget">Widgets</a></li>
+                    <li class="active">Edit Widget</li>
+
+                </ol>
+
+            </section>
+
+            <section class="content">
+
+                <div class ="col-xs-4">
+
+                    <h1>Create Widget</h1>
 
     <form class="form" role="form" method="POST" action="{{ url('/widget/'. $widget->id) }}">
 
@@ -56,5 +73,13 @@
         </div>
 
     </form>
+
+    </div>
+
+    </section>
+
+    </section>
+
+    </div>
 
 @endsection

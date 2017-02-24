@@ -8,6 +8,7 @@ use App\Exceptions\EmailAlreadyInSystemException;
 use App\Exceptions\CredentialsDoNotMatchException;
 use Illuminate\Support\Facades\DB;
 use App\Exceptions\TransactionFailedException;
+use App\Events\RegistrationCompleted;
 
 trait FindsOrCreatesUsers
 {
@@ -55,6 +56,8 @@ trait FindsOrCreatesUsers
         // if no user matching social exists, we create one
 
         $authUser = $this->makeNewUser($socialUser);
+
+        event(new RegistrationCompleted($authUser));
 
         return $authUser;
 

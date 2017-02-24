@@ -127,8 +127,6 @@ class ProfileController extends Controller
 
         $user = User::where('id', '=', $profile->user_id)->first();
 
-        alert()->success('Congrats!', 'You made your profile');
-
         return view('profile.show', compact('profile', 'user'));
     }
 
@@ -206,7 +204,6 @@ class ProfileController extends Controller
                           'gender' => $request->gender,
                           'birthdate' => $request->birthdate]);
 
-        alert()->success('Congrats!', 'You updated your profile');
 
         return Redirect::route('profile.show', ['profile' => $profile]);
 
@@ -233,12 +230,12 @@ class ProfileController extends Controller
 
         if (Auth::user()->isAdmin()){
 
-            alert()->overlay('Attention!', 'You deleted a profile', 'error');
+
 
             return Redirect::route('profile.index');
         }
 
-        alert()->overlay('Attention!', 'You deleted a profile', 'error');
+
 
         return Redirect::route('home');
 
