@@ -37,7 +37,7 @@
 
                             <h1 class="myTableFont">Create Profile</h1>
 
-                            <form class="form" role="form" method="POST" action="{{ url('/profile') }}">
+                            <form class="form form-border" role="form" method="POST" action="{{ url('/profile') }}">
 
                             {{ csrf_field() }}
 

@@ -42,7 +42,7 @@
                                  alt="User Image">
 
                             <div class="panel panel-default grid-results">
-
+                                <div class="box-body table-responsive no-padding">
                                 <!-- Table -->
                                 <table class="table table-striped">
                                     <tr>
@@ -107,7 +107,7 @@
 
                                 </table>
 
-
+                                </div>
                             </div>
                         </div>
                     </div>

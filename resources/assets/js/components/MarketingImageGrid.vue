@@ -60,6 +60,7 @@
 
             <pagination></pagination>
 
+
         </div>
     </div>
 
@@ -97,7 +98,8 @@
                 go_to_page: null,
                 sortOrder: 1,
                 sortKey: '',
-                createUrl: '/marketing-image/create'
+                createUrl: '/marketing-image/create',
+                showCreateButton: true
             }
         },
         methods: {

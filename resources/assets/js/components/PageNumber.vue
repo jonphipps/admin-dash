@@ -1,6 +1,6 @@
 <template>
 
-    <div class="pull-right">
+    <div class="pull-right" v-show="$parent.pages.length > 1">
 
         <div class="grid-results">
 

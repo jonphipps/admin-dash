@@ -13,16 +13,16 @@ class MarketingImageQuery implements DataQuery
     {
 
         $rows = DB::table('marketing_images')
-              ->select('id as Id',
-                       'image_name as Name',
-                       'image_extension as Ext',
-                       'image_weight as Weight',
-                       'is_featured as Featured',
-                       'is_active as Active',
-                       DB::raw('DATE_FORMAT(created_at, 
+                ->select('id as Id',
+                         'image_name as Name',
+                         'image_extension as Ext',
+                         'image_weight as Weight',
+                         'is_featured as Featured',
+                         'is_active as Active',
+                DB::raw('DATE_FORMAT(created_at, 
                                "%m-%d-%Y") as Created'))
-              ->orderBy($column, $direction)
-              ->paginate(10);
+                ->orderBy($column, $direction)
+                ->paginate(10);
 
         return $rows;
 

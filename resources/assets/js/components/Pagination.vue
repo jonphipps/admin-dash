@@ -2,7 +2,7 @@
     <div>
         <div class="row">
 
-            <div class="pull-left"> <a v-bind:href="$parent.createUrl">
+            <div class="pull-left" v-show="$parent.showCreateButton"> <a v-bind:href="$parent.createUrl">
 
                 <button type="button" class="btn btn-lg btn-primary grid-results">
 
@@ -13,6 +13,7 @@
             </a>
 
             </div>
+            <div v-show="$parent.pages.length > 1">
             <div class="pull-right for-page-button">
 
                 <button @click="$parent.getData($parent.go_to_page)"class="btn btn-default">
@@ -37,6 +38,8 @@
                 <li><a @click.prevent="$parent.getData($parent.last_page_url)"> last </a></li>
             </ul>
         </div>
+    </div>
+
     </div>
 </template>
 

@@ -49,3 +49,46 @@ table thead tr th {
 .grid-results {
   margin: 10px;
 }
+
+.white-font > a {
+  color: white;
+}
+
+.white-font > a:hover {
+  color: #d7dbe2;
+}
+
+.white-font-15 > a {
+  color: white;
+  font-size: 15px;
+}
+
+.white-font-15 > a:hover {
+  color: #d7dbe2;
+  font-size: 15px;
+}
+
+.margin-10 {
+  margin: 10px;
+}
+
+.margin-20 {
+  margin: 20px;
+}
+
+.margin-30 {
+  margin: 30px;
+}
+
+.margin-top-20 {
+  margin-top: 20px;
+}
+
+.form-border {
+  width: 100%;
+  color: #555;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 15px;
+  background-color: #f9fafc;
+}

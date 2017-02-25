@@ -39,7 +39,7 @@
 
 
 
-                    <form class="form" role="form" method="POST"
+                    <form class="form form-border" role="form" method="POST"
                           action="{{ url('/marketing-image') }}"
                           enctype="multipart/form-data">
 

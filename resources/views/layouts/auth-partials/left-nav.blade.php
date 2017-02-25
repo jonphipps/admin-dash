@@ -36,6 +36,8 @@
             <li><a href="/admin"><i class="fa fa-dashboard"></i>
                      <span>Admin</span></a></li>
             @endif
+            <li><a href="/home"><i class="fa fa-dashboard"></i>
+                    <span>User Dash</span></a></li>
             <li><a href="/determine-profile-route"><i class="fa fa-user"></i> <span>Profile</span></a></li>
             <li><a href="/settings"><i class="fa fa-wrench"></i> <span>Account Settings</span></a></li>
             <li class="treeview">

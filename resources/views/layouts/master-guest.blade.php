@@ -31,7 +31,7 @@
 
     @yield('content')
 
-    @include('layouts.guest-partials.footer')
+    @include('layouts.common-partials.footer')
 
 
 

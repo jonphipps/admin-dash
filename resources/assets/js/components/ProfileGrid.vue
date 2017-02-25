@@ -4,7 +4,7 @@
 
         <div class="col-lg-12">
 
-            <h1>Widgets</h1>
+            <h1>Profiles</h1>
 
             <search-box></search-box>
 
@@ -24,31 +24,45 @@
 
                             <td>
 
-                                {{ row.Id }}
+                                   {{ row.Id }}
 
                             </td>
 
                             <td>
 
-                                <a v-bind:href="'/widget/' + row.Id + '-' + row.Slug "> {{ row.Name }}</a>
+                                <a v-bind:href="'/profile/' + row.Id"> {{ convertName(row.First, row.Last) }}</a>
+
+                            </td>
+
+
+
+                            <td>
+
+                                <a v-bind:href="'/user/' + row.UserId"> {{ row.User }}</a>
 
                             </td>
 
                             <td>
 
-                                {{ row.Created }}
+                                 {{ convertGender(row.Gender) }}
+
+                            </td>
+
+                            <td>
+
+                                   {{ row.Created }}
 
                             </td>
 
                             <td >
 
-                                <a v-bind:href="'/widget/' + row.Id + '/edit'">
+                                <a v-bind:href="'/profile/' + row.Id + '/edit'">
 
-                                    <button type="button" class="btn btn-default">
+                                <button type="button" class="btn btn-default">
 
                                         Edit
 
-                                    </button>
+                                </button>
 
                                 </a>
 
@@ -68,7 +82,6 @@
 
             <pagination></pagination>
 
-
         </div>
 
     </div>
@@ -83,20 +96,20 @@
     export default {
 
         components: {'pagination' : require('./Pagination'),
-            'search-box' : require('./SearchBox'),
-            'grid-count' : require('./GridCount'),
-            'page-number' : require('./PageNumber'),
-            'table-head' : require('./TableHead')},
+                     'search-box' : require('./SearchBox'),
+                     'grid-count' : require('./GridCount'),
+                     'page-number' : require('./PageNumber'),
+                     'table-head' : require('./TableHead')},
 
         mounted: function () {
 
-            gridData.loadData('api/widget-data', this);
+            gridData.loadData('api/profile-data', this);
 
         },
         data: function () {
             return {
                 query: '',
-                gridColumns: ['Id', 'Name', 'Created'],
+                gridColumns: ['Id', 'Name', 'User', 'Gender', 'Created'],
                 gridData: [],
                 total: null,
                 next_page_url: null,
@@ -109,12 +122,19 @@
                 go_to_page: null,
                 sortOrder: 1,
                 sortKey: '',
-                createUrl: '/widget/create',
-                showCreateButton: true
+                createUrl: '/profile/create'
             }
         },
 
         methods: {
+
+            convertGender: function (value){
+                return value == 1 ? 'Male' : 'Female';
+            },
+
+            convertName: function (first, last){
+                return first + ' ' + last;
+            },
 
             sortBy: function (key){
                 this.sortKey = key;
@@ -129,7 +149,7 @@
 
             getData:  function(request){
 
-                gridData.getQueryData(request, 'api/widget-data', this);
+                gridData.getQueryData(request, 'api/profile-data', this);
 
             },
 
@@ -146,7 +166,7 @@
             resetPageNumbers: function(){
                 this.pages = [];
                 for (var i = 1; i <= this.last_page; i++) {
-                    this.pages.push(i);
+                     this.pages.push(i);
                 }
             },
 

@@ -40,7 +40,7 @@
 
 
     <!-- image name no input allowed -->
-
+    <div class="form-border">
     <div>
 
         <div class="control-label">
@@ -189,6 +189,8 @@
         </div>
 
     </form>
+
+    </div>
 
     </div>
 

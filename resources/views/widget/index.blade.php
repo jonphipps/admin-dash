@@ -13,7 +13,7 @@
 
     <div class="content-wrapper">
 
-        <!-- Content Header (Page header) -->
+        <!-- container -->
 
         <section class="container">
 
@@ -21,26 +21,34 @@
 
             <section class="content-header">
 
-
                 <ol class="breadcrumb">
 
                     <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
-                    <li><a href="/widget">Widget</a></li>
+                    <li><a href="/widget">Widgets</a></li>
                     <li class="active">Widgets</li>
 
                 </ol>
 
             </section>
 
-            <section class="content">
+            <!-- end content header -->
 
-    <data-extracted-sample></data-extracted-sample>
+                <!-- content -->
 
+                <section class="content">
 
-            </section>
+                    <widget-grid></widget-grid>
+
+                </section>
+
+                <!-- end content -->
 
         </section>
 
+        <!-- end section container -->
+
     </div>
+
+    <!-- end Content Wrapper -->
 
 @endsection

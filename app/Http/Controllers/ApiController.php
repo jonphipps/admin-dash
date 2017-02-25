@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use App\Queries\GridQueries\GridQuery;
 use App\Queries\GridQueries\WidgetQuery;
 use App\Queries\GridQueries\MarketingImageQuery;
+use App\Queries\GridQueries\UserQuery;
+use App\Queries\GridQueries\ProfileQuery;
+
 
 class ApiController extends Controller
 {
@@ -21,6 +24,13 @@ class ApiController extends Controller
     {
 
         return GridQuery::sendData($request, new MarketingImageQuery);
+    }
+
+    public function profileData(Request $request)
+    {
+
+        return GridQuery::sendData($request, new ProfileQuery);
+
     }
 
     public function userData(Request $request)

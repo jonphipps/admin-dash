@@ -48,7 +48,7 @@ desired effect
 
     @yield('content')
 
-    @include('layouts.auth-partials.footer')
+    @include('layouts.common-partials.footer')
 
 </div>
 

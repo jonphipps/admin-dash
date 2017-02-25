@@ -16,7 +16,7 @@
 
         <section class="container">
 
-            <!-- Content Header (Page header) -->
+            <!-- Container -->
 
             <section class="content-header">
 
@@ -31,61 +31,29 @@
 
             </section>
 
+            <!-- end section Content Header -->
+
             <section class="content">
 
-    <div class ="col-xs-4">
+                <div class ="col-xs-4">
 
-    <h2>Create New Widget</h2>
+                    <h2>Create New Widget</h2>
 
+                        @include('widget.create-form')
 
-    <form class="form" role="form" method="POST" action="{{ url('/widget') }}">
-
-    {{ csrf_field() }}
-
-    <!-- widget_name Form Input -->
-
-
-
-        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-
-            <label class="control-label">Widget Name</label>
-
-            <input type="text" class="form-control" name="name" value="{{ old('name') }}">
-
-            @if ($errors->has('name'))
-
-                <span class="help-block">
-                <strong>{{ $errors->first('name') }}</strong>
-                </span>
-
-            @endif
-
-        </div>
-
-
-        <div class="form-group">
-
-            <button type="submit" class="btn btn-primary btn-lg">
-
-                Create
-
-            </button>
-
-        </div>
-
-
-
-    </form>
-
-    </div>
-
-
+                </div>
 
             </section>
 
+            <!-- end section Content -->
+
         </section>
 
+        <!-- end container -->
+
     </div>
+
+    <!-- end content-wrapper -->
 
 
 @endsection

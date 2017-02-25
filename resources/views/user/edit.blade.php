@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.master-admin')
 
 @section('title')
 
@@ -8,28 +8,38 @@
 
 @section('content')
 
-    @if(Auth::user()->isAdmin())
+    <div class="content-wrapper">
 
-        <ol class='breadcrumb'>
-            <li><a href='/'>Home</a></li>
-            <li><a href='/user'>Users</a></li>
-            <li><a href='/user/{{ $user->id }}'>{{ $user->name }}</a></li>
-        </ol>
 
-    @else
+        <!-- Content Header (Page header) -->
 
-        <ol class='breadcrumb'>
-            <li><a href='/'>Home</a></li>
-            <li><a href='/user/{{ $user->id }}'>{{ $user->name }}</a></li>
-        </ol>
+        <section class="content-header">
 
-    @endif
 
-    <h2>Edit Your Record</h2>
+            <ol class="breadcrumb">
 
-    <hr/>
+                <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li><a href="/user/{{ $user->id }}">User</a></li>
+                <li class="active">Edit User</li>
 
-    <form class="form" role="form" method="POST" action="{{ url('/user/'. $user->id) }}">
+            </ol>
+
+        </section>
+
+        <!-- Main content -->
+
+        <div class="container">
+
+        <section class="content">
+
+
+                <div class="row">
+
+                    <div class ="col-xs-6">
+
+                        <h1>Edit User</h1>
+
+    <form class="form form-border" role="form" method="POST" action="{{ url('/user/'. $user->id) }}">
 
         <input type="hidden" name="_method" value="patch">
 
@@ -91,5 +101,23 @@
         </div>
 
     </form>
+
+    </div>
+
+    </div>
+
+
+
+
+
+    </section>
+
+        </div>
+
+
+
+    </div>
+
+
 
 @endsection

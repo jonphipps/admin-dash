@@ -30,8 +30,11 @@ Route::get('/admin-v2', 'AdminController@adminV2');
 Route::get('api/category-data', 'ApiController@categoryData');
 Route::get('api/lesson-data', 'ApiController@lessonData');
 Route::get('api/marketing-image-data', 'ApiController@marketingImageData');
+Route::get('api/profile-data', 'ApiController@profileData');
 Route::get('api/subcategory-data', 'ApiController@subcategoryData');
+Route::get('api/user-data', 'ApiController@userData');
 Route::get('api/widget-data', 'ApiController@widgetData');
+
 
 // Authentication routes
 

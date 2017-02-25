@@ -17,7 +17,7 @@
             </h1>
             <ol class="breadcrumb">
                 <li><a href="#"><i class="fa fa-dashboard"></i>Dashboard</a></li>
-                <li class="active">dashboard</li>
+                <li class="active">User Dashboard</li>
             </ol>
         </section>
 

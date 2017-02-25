@@ -37,9 +37,7 @@
 
                             <h1>Edit Profile</h1>
 
-                            <hr/>
-
-                            <form class="form" role="form" method="POST" action="{{ url('/profile/'. $profile->id) }}">
+                            <form class="form form-border" role="form" method="POST" action="{{ url('/profile/'. $profile->id) }}">
 
                                 <input type="hidden" name="_method" value="patch">
 

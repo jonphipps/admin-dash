@@ -67,6 +67,7 @@
             </section>
 
             <pagination></pagination>
+            <create-button></create-button>
 
         </div>
 
@@ -108,7 +109,8 @@
                 go_to_page: null,
                 sortOrder: 1,
                 sortKey: '',
-                createUrl: '/widget/create'
+                createUrl: '/widget/create',
+                showCreateButton: true
             }
         },
 

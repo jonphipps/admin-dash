@@ -30,7 +30,7 @@
 
     @yield('content')
 
-    @include('layouts.admin-partials.footer-admin')
+    @include('layouts.common-partials.footer')
 
 
 
