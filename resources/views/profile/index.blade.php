@@ -8,7 +8,11 @@
 
 @section('content')
 
+    <!-- content-wrapper -->
+
     <div class="content-wrapper">
+
+        <!-- container -->
 
         <div class="container">
 
@@ -26,28 +30,25 @@
 
             </section>
 
-            <!-- Main content -->
+            <!-- end content header -->
+
+            <!-- content holds data grid -->
+
             <section class="content">
 
-                <div class="container">
+                <profile-grid></profile-grid>
 
-                    <div class="row">
+            </section>
 
-                     <profile-grid></profile-grid>
+            <!-- end content section -->
 
+        </div>
 
-
-    </div>
-
-    </div>
-
-
-
-    </section>
+        <!-- end container -->
 
     </div>
 
-    </div>
+    <!-- end content-wrapper -->
 
 
 

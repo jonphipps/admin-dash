@@ -8,116 +8,50 @@
 
 @section('content')
 
+    <!-- content-wrapper -->
+
     <div class="content-wrapper">
-
-
-        <!-- Content Header (Page header) -->
-
-        <section class="content-header">
-
-
-            <ol class="breadcrumb">
-
-                <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
-                <li><a href="/user/{{ $user->id }}">User</a></li>
-                <li class="active">Edit User</li>
-
-            </ol>
-
-        </section>
-
-        <!-- Main content -->
 
         <div class="container">
 
-        <section class="content">
+
+            <!-- content-header has breadcrumbs -->
+
+            <section class="content-header">
 
 
-                <div class="row">
+                <ol class="breadcrumb">
 
-                    <div class ="col-xs-6">
+                    <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
+                    <li><a href="/user/{{ $user->id }}">User</a></li>
+                    <li class="active">Edit User</li>
 
-                        <h1>Edit User</h1>
+                </ol>
 
-    <form class="form form-border" role="form" method="POST" action="{{ url('/user/'. $user->id) }}">
+            </section>
 
-        <input type="hidden" name="_method" value="patch">
+            <!-- content -->
 
-    {{ csrf_field() }}
+            <section class="content">
 
-    <!-- name Form Input -->
+                <div class="col-xs-4">
 
-        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+                    <h2 class="min-width-200">Edit User</h2>
 
-            <label class="control-label">User Name</label>
+                    @include('user.edit-form')
 
-            <input type="text" class="form-control" name="name" value="{{ $user->name }}">
+                </div>
 
-            @if ($errors->has('name'))
+            </section>
 
-                <span class="help-block">
-                <strong>{{ $errors->first('name') }}</strong>
-                </span>
-
-            @endif
-
-        </div>
-
-
-
-        <!-- is_admin Form Input -->
-
-        <div class="form-group{{ $errors->has('is_admin') ? ' has-error' : '' }}">
-
-            <label class="control-label">Is Admin?</label>
-
-
-            <select class="form-control" id="is_admin" name="is_admin">
-                <option value="{{ $user->is_admin }}">{{ $user->showAdminStatusOf($user) }}</option>
-                <option value="1">Yes</option>
-                <option value="0">No</option>
-            </select>
-
-
-            @if ($errors->has('is_admin'))
-
-                <span class="help-block">
-                <strong>{{ $errors->first('is_admin') }}</strong>
-                </span>
-
-            @endif
+            <!-- end content section -->
 
         </div>
 
-
-        <div class="form-group">
-
-            <button type="submit" class="btn btn-primary btn-lg">
-
-                Update
-
-            </button>
-
-        </div>
-
-    </form>
+        <!-- end container -->
 
     </div>
 
-    </div>
-
-
-
-
-
-    </section>
-
-        </div>
-
-
-
-    </div>
-
-
+    <!-- end content-wrapper -->
 
 @endsection

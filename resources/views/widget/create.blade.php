@@ -8,18 +8,17 @@
 
 @section('content')
 
-    <!-- Content Wrapper. Contains page content -->
+    <!-- content-wrapper -->
 
     <div class="content-wrapper">
 
-        <!-- Content Header (Page header) -->
+        <!-- container -->
 
-        <section class="container">
+        <div class="container">
 
-            <!-- Container -->
+            <!-- content-header has breadcrumbs -->
 
             <section class="content-header">
-
 
                 <ol class="breadcrumb">
 
@@ -31,13 +30,15 @@
 
             </section>
 
-            <!-- end section Content Header -->
+            <!-- end content-header section -->
+
+            <!-- content holds form -->
 
             <section class="content">
 
                 <div class ="col-xs-4">
 
-                    <h2>Create New Widget</h2>
+                    <h2 class="min-width-200">Create Widget</h2>
 
                         @include('widget.create-form')
 
@@ -45,15 +46,14 @@
 
             </section>
 
-            <!-- end section Content -->
+            <!-- end content section -->
 
-        </section>
+        </div>
 
         <!-- end container -->
 
     </div>
 
     <!-- end content-wrapper -->
-
 
 @endsection

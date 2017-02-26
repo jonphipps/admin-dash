@@ -125,14 +125,16 @@ class MarketingImageController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function update($id, EditImageRequest $request)
+    public function update($marketing_image, EditImageRequest $request)
     {
+        dd('you made it here');
 
-        $marketingImage = MarketingImage::findOrFail($id);
+        $marketingImage = $marketing_image;
 
         $this->setUpdatedModelValues($request, $marketingImage);
 
         // if file, we have additional requirements before saving
+
         if ($this->newFileIsUploaded()) {
 
             $this->deleteExistingImages($marketingImage);
@@ -144,6 +146,7 @@ class MarketingImageController extends Controller
         $marketingImage->save();
 
         // check for file, if new file, overwrite existing file
+
         if ($this->newFileIsUploaded()){
 
             $file = $this->getUploadedFile();

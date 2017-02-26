@@ -33,7 +33,7 @@
 
             <!-- end content header -->
 
-                <!-- content -->
+                <!-- content holds table-->
 
                 <section class="content">
 
@@ -41,7 +41,7 @@
 
                 </section>
 
-                <!-- end content -->
+                <!-- end content table -->
 
         </section>
 

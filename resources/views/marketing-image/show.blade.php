@@ -8,11 +8,15 @@
 
 @section('content')
 
+    <!-- content-wrapper -->
+
     <div class="content-wrapper">
+
+        <!-- container -->
 
         <div class="container">
 
-            <!-- Content Header (Page header) -->
+            <!-- content-header has breadcrumbs -->
 
             <section class="content-header">
 
@@ -27,143 +31,43 @@
 
             </section>
 
-            <!-- Main content -->
+            <!-- end content-header section -->
+
+            <!-- content -->
+
             <section class="content">
-                <div class="container">
-                    <div class="row">
 
-    <h1>Marketing Image -- {{ $marketingImage->image_name }}</h1>
+                <h2>Marketing Image -- {{ $marketingImage->image_name }}</h2>
 
+                    <div class="panel panel-default">
 
-
-    <hr/>
-
-    <div class="panel panel-default">
-
-        <!-- Table -->
-        <table class="table table-striped">
-
-            <tr>
-
-                <th>Thumbnail</th>
-
-            </tr>
-
-            <tr>
-
-                <td>
-
-                    <img src="{{ $marketingImage->showImage($marketingImage, $thumbnailPath) }}">
-
-                </td>
-
-            </tr>
-
-            <tr>
-
-                <th>Active?</th>
-
-            </tr>
-
-            <tr>
-
-                <td>{{ $marketingImage->showActiveStatus($marketingImage->is_active) }}</td>
-
-            </tr>
-
-            <tr>
-
-                <th>Featured?</th>
-
-            </tr>
-
-            <tr>
-
-                <td>{{ $marketingImage->showFeaturedStatus($marketingImage->is_featured) }}</td>
-
-            </tr>
-
-            <tr>
-
-                <th>Image Weight</th>
-
-            </tr>
-
-            <tr>
-
-                <td>{{ $marketingImage->image_weight }}</td>
-
-            </tr>
-
-            <tr>
-
-                <th>Primary Image</th>
-
-            </tr>
-
-            <tr>
-
-                <td>
-
-                    <img src="{{ $marketingImage->showImage($marketingImage, $imagePath) }}" style="max-width: 600px;">
-
-                </td>
-            </tr>
-
-            <tr>
-                <td>
-
-                    <div class="pull-left">
+                        @include('marketing-image.table-show')
 
 
-                        <a href="/marketing-image/{{ $marketingImage->id }}/edit">
-
-                            <button type="button" class="btn btn-primary btn-lg">Edit Image</button></a>
-                       <br>
-                        <br>
-
-                        <form class="form" role="form" method="POST" action="{{ url('/marketing-image/'. $marketingImage->id) }}">
-                            <input type="hidden" name="_method" value="delete">
-                            {{ csrf_field() }}
-
-                            <button class="btn btn-danger btn-lg" Onclick="return ConfirmDelete();" type="submit">
-                                Delete
-                                </button>
-
-                        </form>
                     </div>
 
-                </td>
+            </section>
 
-            </tr>
+        </div>
 
-        </table>
+        <!-- end container -->
 
     </div>
 
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </div>
+    <!-- end content-wrapper -->
 
 @endsection
+
 @section('scripts')
+
     <script>
-        function ConfirmDelete()
-        {
-            var x = confirm("Are you sure you want to delete?");
 
-            if (x){
+        function ConfirmDelete() {
 
-                return true;
-
-            } else {
-
-                return false;
-
-            }
+            return confirm("Are you sure you want to delete?");
 
         }
+
     </script>
+
 @endsection

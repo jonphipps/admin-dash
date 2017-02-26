@@ -101,11 +101,38 @@ table thead tr th {
 
  }
 
- .form-border{
+ .margin-top-10 {
+
+   margin-top: 10px;
+
+ }
+
+ .margin-bottom-10 {
+
+   margin-top: 10px;
+
+ }
+
+ .form-border {
+
    width: 100%;
+   min-width: 200px;
    color: #555;
    border: 1px solid #ccc;
    border-radius: 4px;
    padding: 15px;
    background-color: #f9fafc;
+
+ }
+
+ .min-width-200 {
+
+   min-width: 200px;
+
+ }
+
+ .min-width-300 {
+
+   min-width: 200px;
+
  }

@@ -8,11 +8,15 @@
 
 @section('content')
 
+    <!-- content-wrapper -->
+
     <div class="content-wrapper">
+
+        <!-- container -->
 
         <div class="container">
 
-            <!-- Content Header (Page header) -->
+            <!-- content-header has breadcrumbs -->
 
             <section class="content-header">
 
@@ -26,135 +30,30 @@
 
             </section>
 
-            <!-- Main content -->
+            <!-- end content-header section -->
+
+            <!-- content has form -->
+
             <section class="content">
 
-                <div class="container">
+                 <div class="col-xs-4">
 
-                    <div class="row">
+                     <h2 class="min-width-200">Create Profile</h2>
 
-                        <div class="col-xs-4">
+                     @include('profile.create-form')
 
-                            <h1 class="myTableFont">Create Profile</h1>
-
-                            <form class="form form-border" role="form" method="POST" action="{{ url('/profile') }}">
-
-                            {{ csrf_field() }}
-
-                            <!-- first_name Form Input -->
-
-                                <div class="form-group{{ $errors->has('first_name') ? ' has-error' : '' }}">
-
-                                    <label class="control-label">First Name</label>
-
-                                    <input type="text" class="form-control" name="first_name"
-                                           value="{{ old('first_name') }}">
-
-                                    @if ($errors->has('first_name'))
-
-                                        <span class="help-block">
-                                            <strong>{{ $errors->first('first_name') }}</strong>
-                                        </span>
-
-                                    @endif
-
-                                </div>
-
-                                <!-- last_name Form Input -->
-
-                                <div class="form-group{{ $errors->has('last_name') ? ' has-error' : '' }}">
-
-                                    <label class="control-label">Last Name</label>
-
-                                    <input type="text" class="form-control" name="last_name"
-                                           value="{{ old('last_name') }}">
-
-                                    @if ($errors->has('last_name'))
-
-                                        <span class="help-block">
-                                                <strong>{{ $errors->first('last_name') }}</strong>
-                                        </span>
-
-                                    @endif
-
-                                </div>
-
-                                <!-- birthdate Form Input -->
-
-                                <div class="form-group{{ $errors->has('birthdate') ? ' has-error' : '' }}">
-
-                                    <label class="control-label">Birthdate</label>
-
-                                    <div>
-
-                                        {{  Form::date('birthdate') }}
-
-                                    </div>
-
-                                    @if ($errors->has('birthdate'))
-
-                                        <span class="help-block">
-                                             <strong>{{ $errors->first('birthdate') }}</strong>
-                                        </span>
-
-                                    @endif
-
-                                </div>
-
-                                <!-- Gender Form Input -->
-
-                                <div class="form-group{{ $errors->has('gender') ? ' has-error' : '' }}">
-
-                                    <label class="control-label">Gender</label>
-
-                                    <select class="form-control" id="gender" name="gender">
-
-                                        <option value="{{old('gender')}}">
-                                            {{ ! is_null(old('gender')) ?
-                                            (old('gender') == 1 ? 'Male' :'Female')
-                                            : 'Please Choose One'}}</option>
-                                        <option value="1">Male</option>
-                                        <option value="0">Female</option>
-
-                                    </select>
-
-                                    @if ($errors->has('gender'))
-
-                                        <span class="help-block">
-                                            <strong>{{ $errors->first('gender') }}</strong>
-                                        </span>
-
-                                    @endif
-
-                                </div>
-
-                                <div class="form-group">
-
-                                    <button type="submit" class="btn btn-primary btn-lg">
-
-                                        Create
-
-                                    </button>
-
-                                </div>
-
-                            </form>
-
-                        </div>
-
-                    </div>
-
-                </div>
+                 </div>
 
             </section>
 
+            <!-- end content section -->
+
         </div>
 
+        <!-- end container -->
 
     </div>
 
-
-
-
+    <!-- end content-wrapper -->
 
 @endsection

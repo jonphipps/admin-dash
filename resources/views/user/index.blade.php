@@ -8,42 +8,47 @@
 
 @section('content')
 
+    <!-- content-wrapper -->
+
     <div class="content-wrapper">
 
-        <!-- Content Header (Page header) -->
+        <!-- container -->
 
-        <section class="content-header">
+        <div class="container">
+
+            <!-- content-header (Page header) -->
+
+            <section class="content-header">
 
 
-            <ol class="breadcrumb">
+                <ol class="breadcrumb">
 
-                <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
-                <li><a href="/user">Users</a></li>
-                <li class="active">Users</li>
+                    <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
+                    <li><a href="/user">Users</a></li>
+                    <li class="active">Users</li>
 
-            </ol>
+                </ol>
 
-        </section>
+            </section>
 
-        <!-- Main content -->
+            <!-- end content-header -->
 
-        <section class="content">
+            <!-- content -->
 
-            <div class="container">
+            <section class="content">
 
-                <div class="row">
+                <user-grid></user-grid>
 
-                    <user-grid></user-grid>
+            </section>
 
-                </div>
+            <!-- end content -->
 
-            </div>
-            <!-- /.row -->
+        </div>
 
-        </section>
-        <!-- /.content -->
+        <!-- end container -->
 
     </div>
-    <!-- /.content-wrapper -->
+
+    <!-- end content-wrapper -->
 
 @endsection

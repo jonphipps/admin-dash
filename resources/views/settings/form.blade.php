@@ -5,7 +5,7 @@
 
       {{ csrf_field() }}
 
-<!-- name Form Input -->
+    <!-- user name form input -->
 
     <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
 
@@ -26,11 +26,14 @@
 
     </div>
 
+    <!-- end user name form input -->
+
+    <!-- email form input -->
+
     <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
 
         <label for="email" class="control-label">E-Mail Address</label>
 
-        <div>
             <input id="email"
                    type="email"
                    class="form-control"
@@ -45,11 +48,11 @@
 
             @endif
 
-        </div>
-
     </div>
 
-    <!-- is_subscribed Form Input -->
+    <!-- end email form input -->
+
+    <!-- is_subscribed form input -->
 
     <div class="form-group{{ $errors->has('is_subscribed') ? ' has-error' : '' }}">
 
@@ -77,6 +80,10 @@
 
     </div>
 
+    <!-- end is_subscribed form input -->
+
+    <!-- submit button -->
+
     <div class="form-group">
 
         <button type="submit" class="btn btn-primary btn-lg">
@@ -86,6 +93,10 @@
         </button>
 
     </div>
+
+    <!-- end submit button -->
+
+    <!-- reset password button -->
 
     <div class="form-group">
 
@@ -100,5 +111,7 @@
         </a>
 
     </div>
+
+    <!-- end reset password button -->
 
 </form>

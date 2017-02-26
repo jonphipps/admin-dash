@@ -8,14 +8,17 @@
 
 @section('content')
 
+    <!-- content-wrapper -->
+
     <div class="content-wrapper">
+
+        <!-- container -->
 
         <div class="container">
 
-            <!-- Content Header (Page header) -->
+            <!-- content-header has breadcrumbs -->
 
             <section class="content-header">
-
 
                 <ol class="breadcrumb">
 
@@ -27,197 +30,96 @@
 
             </section>
 
-            <!-- Main content -->
+            <!-- content has form -->
+
             <section class="content">
-                <div class="container">
-                    <div class="row">
 
-                        <div class ="col-xs-4">
+                        <div class="col-xs-4">
 
-                        <h1>Edit Image</h1>
+                            <h2 class="min-width-200">Edit Image</h2>
 
+                            <!-- begin form border -->
 
+                            <div class="form-border">
 
+                                <div>
 
-    <!-- image name no input allowed -->
-    <div class="form-border">
-    <div>
+                                    <div class="control-label">
 
-        <div class="control-label">
-            Image Name:
+                                        Image Name:
 
-        </div>
+                                    </div>
 
-        <h4>{{ $marketingImage->image_name
-               . '.'
-               . $marketingImage->image_extension }}
-        </h4>
+                                    <h4>
 
-    </div>
+                                        {{ $marketingImage->image_name
+                                           . '.'
+                                           . $marketingImage->image_extension }}
 
-    <div class="control-label">Thumbnail:</div>
-    <!-- image thumbnail -->
-    <div>
+                                    </h4>
 
-        <img src="{{ $marketingImage->showImage($marketingImage, $thumbnailPath) }}">
+                                </div>
 
-    </div>
+                                <div class="control-label">
 
-    <br>
+                                    Thumbnail:
 
+                                </div>
 
+                                <!-- image thumbnail -->
 
-    <form class="form" role="form" method="POST"
-          action="{{ url('/marketing-image/' . $marketingImage->id) }}"
-          enctype="multipart/form-data">
+                                <div class="margin-top-10 margin-bottom-10">
 
-        <input type="hidden" name="_method" value="patch">
+                                    <img src="{{ $marketingImage->showImage($marketingImage, $thumbnailPath) }}">
 
-    {{ csrf_field() }}
+                                </div>
 
-    <!-- is_active Form Input -->
+                                <!-- form with update button -->
 
-        <div class="form-group{{ $errors->has('is_active') ? ' has-error' : '' }}">
+                                @include('marketing-image.edit-form')
 
-            <label class="control-label">Is Active</label>
+                                <!-- end form with update button -->
 
+                                <!-- delete button outside other form,
+                                     but included in form border -->
 
-            <select class="form-control" id="is_active" name="is_active">
-                <option value="{{$marketingImage->is_active}}">
-                    {{ $marketingImage->is_active == 1 ? 'Yes' :'No' }}</option>
-                <option value="1">Yes</option>
-                <option value="0">No</option>
-            </select>
+                                @include('marketing-image.delete-button')
 
+                                <!-- end delete button -->
 
-            @if ($errors->has('is_active'))
+                            </div>
 
-                <span class="help-block">
-                <strong>{{ $errors->first('is_active') }}</strong>
-                </span>
+                            <!-- end form border -->
 
-            @endif
+                        </div>
+
+                        <!-- end col-xs-4 -->
+
+            </section>
+
+            <!-- end content-->
 
         </div>
 
-        <!-- is_featured Form Input -->
-
-        <div class="form-group{{ $errors->has('is_featured') ? ' has-error' : '' }}">
-
-            <label class="control-label">Is Featured</label>
-
-
-            <select class="form-control" id="is_featured" name="is_featured">
-                <option value="{{$marketingImage->is_featured}}">
-                    {{ $marketingImage->is_featured == 1 ? 'Yes' :'No' }}</option>
-                <option value="1">Yes</option>
-                <option value="0">No</option>
-            </select>
-
-
-            @if ($errors->has('is_featured'))
-
-                <span class="help-block">
-                <strong>{{ $errors->first('is_featured') }}</strong>
-                </span>
-
-            @endif
-
-        </div>
-
-        <!-- image_weight Form Input -->
-
-        <div class="form-group{{ $errors->has('image_weight') ? ' has-error' : '' }}">
-
-            <label class="control-label">Image Weight</label>
-
-            <input type="number" class="form-control" name="image_weight"
-            value="{{ old('image_weight') ? old('image_weight') : $marketingImage->image_weight }}">
-
-        @if ($errors->has('image_weight'))
-
-                <span class="help-block">
-                <strong>{{ $errors->first('image_weight') }}</strong>
-                </span>
-
-            @endif
-
-        </div>
-
-        <!-- image file Form Input -->
-
-        <div class="form-group{{ $errors->has('image') ? ' has-error' : '' }}">
-
-            <div class="form-group">
-                <label class="control-label">Primary Image
-                </label>
-
-                <input type="file" name="image" id="image">
-            </div>
-
-            @if ($errors->has('image'))
-
-                <span class="help-block">
-                <strong>{{ $errors->first('image') }}</strong>
-                </span>
-
-        @endif
-
-        <!-- Submit Button -->
-
-            <div class="form-group">
-
-                <button type="submit" class="btn btn-primary btn-lg">
-
-                    Update
-
-                </button>
-
-            </div>
-
-            <form class="form" role="form" method="POST" action="{{ url('/marketing-image/'. $marketingImage->id) }}">
-                <input type="hidden" name="_method" value="delete">
-                {{ csrf_field() }}
-
-                <button class="btn btn-danger btn-lg" Onclick="return ConfirmDelete();" type="submit">
-                    Delete
-                    </button>
-
-            </form>
-
-
-        </div>
-
-    </form>
+        <!-- end container -->
 
     </div>
 
-    </div>
-
-    </div>
-    </div>
-
-    </section>
-
-       </div>
-    </div>
+    <!-- end content-wrapper -->
 
 @endsection
 
 @section('scripts')
+
     <script>
-        function ConfirmDelete()
-        {
+
+        function ConfirmDelete() {
+
             var x = confirm("Are you sure you want to delete?");
-            if (x){
+            return x;
 
-                return true;
-
-            } else {
-
-                return false;
-
-            }
         }
+
     </script>
+
 @endsection

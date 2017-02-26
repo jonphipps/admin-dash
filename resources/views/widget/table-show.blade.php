@@ -1,7 +1,6 @@
 <table class="table table-striped">
 
     <thead>
-
     <tr>
 
         <th>Id</th>
@@ -10,29 +9,44 @@
 
         @if(Auth::user()->adminOrCurrentUserOwns($widget))
 
-            <th>Edit</th>
+        <th>Edit</th>
+        <th>Delete</th>
 
         @endif
 
-        <th>Delete</th>
-
     </tr>
-
     </thead>
 
     <tbody>
-
     <tr>
+
+        <!-- id -->
+
         <td>{{ $widget->id }}</td>
 
-        <td><a href="/widget/{{ $widget->id }}/edit">
+        <!-- end id -->
+
+        <!-- name -->
+
+        <td>
+            <a href="/widget/{{ $widget->id }}/edit">
+
                {{ $widget->name }}
+
             </a>
         </td>
 
+        <!-- end name -->
+
+        <!-- date created -->
+
         <td>{{ $widget->created_at }}</td>
 
+        <!-- end date created -->
+
         @if(Auth::user()->adminOrCurrentUserOwns($widget))
+
+        <!-- edit button -->
 
         <td>
              <a href="/widget/{{ $widget->id }}/edit">
@@ -47,7 +61,9 @@
              </a>
         </td>
 
-        @endif
+        <!-- end edit button -->
+
+        <!-- begin delete form -->
 
         <td>
 
@@ -75,8 +91,11 @@
 
         </td>
 
-    </tr>
+        <!-- end delete form -->
 
+        @endif
+
+    </tr>
     </tbody>
 
 </table>

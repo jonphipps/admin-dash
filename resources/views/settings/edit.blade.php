@@ -8,11 +8,15 @@
 
 @section('content')
 
+    <!-- content-wrapper -->
+
     <div class="content-wrapper">
+
+        <!-- container -->
 
         <div class="container">
 
-            <!-- Content Header (Page header) -->
+            <!-- content-header has breadcrumbs -->
 
             <section class="content-header">
 
@@ -28,33 +32,21 @@
 
             <!-- end content header -->
 
-            <!-- content -->
+            <!-- content has form -->
 
             <section class="content">
 
-                <!-- container -->
+                <div class="col-xs-4">
 
-                <div class="container">
+                    <h2 class="min-width-200">Update {{ $user->name }}</h2>
 
-                    <div class="row">
-
-                        <div class="col-xs-4">
-
-                            <h1 class="myTableFont">Update {{ $user->name }}</h1>
-
-                            @include('settings.form')
-
-                        </div>
-
-                    </div>
+                        @include('settings.form')
 
                 </div>
 
-                <!-- end container -->
-
             </section>
 
-            <!-- end content -->
+            <!-- end content section -->
 
         </div>
 

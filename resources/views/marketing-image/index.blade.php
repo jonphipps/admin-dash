@@ -3,36 +3,48 @@
 
 @section('content')
 
+    <!-- content-wrapper -->
+
     <div class="content-wrapper">
 
-        <!-- Content Header (Page header) -->
+        <!-- container -->
 
-        <section class="content-header">
+        <div class="container">
+
+            <!-- content-header (Page header) -->
+
+            <section class="content-header">
 
 
-            <ol class="breadcrumb">
+                <ol class="breadcrumb">
 
-                <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
-                <li><a href="/marketing-image">Marketing Images</a></li>
-                <li class="active">Marketing Images</li>
+                    <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
+                    <li><a href="/marketing-image">Marketing Images</a></li>
+                    <li class="active">Marketing Images</li>
 
-            </ol>
+                </ol>
 
-        </section>
+            </section>
 
-<!-- Main content -->
-<section class="content">
-    <div class="container">
-    <div class="row">
+            <!-- end content-header -->
 
-        <marketing-image-grid></marketing-image-grid>
+            <!-- content -->
+
+            <section class="content">
+
+                <marketing-image-grid></marketing-image-grid>
+
+
+            </section>
+
+            <!-- end content section -->
+
+        </div>
+
+        <!-- end container -->
 
     </div>
-    </div>
-    <!-- /.row -->
-</section>
-<!-- /.content -->
-</div>
-<!-- /.content-wrapper -->
+
+    <!-- end content-wrapper -->
 
 @endsection

@@ -8,15 +8,15 @@
 
 @section('content')
 
-    <!-- Content Wrapper. Contains page content -->
+    <!-- content-wrapper -->
 
     <div class="content-wrapper">
 
-        <!-- Container -->
+        <!-- container -->
 
         <section class="container">
 
-            <!-- Content Header (Page header) -->
+            <!-- content-header has breadcrumbs -->
 
             <section class="content-header">
 
@@ -33,11 +33,11 @@
 
             <!-- end content header section  -->
 
-            <!-- content -->
+            <!-- content holds table-->
 
             <section class="content">
 
-                <h1>{{ $widget->name }}</h1>
+                <h2 class="min-width-200">{{ $widget->name }}</h2>
 
                     <div class="panel panel-default">
 
@@ -47,11 +47,11 @@
 
             </section>
 
-            <!-- end content section -->
+            <!-- end content table section -->
 
         </section>
 
-        <!-- end Container section -->
+        <!-- end container section -->
 
     </div>
 
@@ -66,8 +66,7 @@
         function ConfirmDelete()
         {
 
-            var x = confirm("Are you sure you want to delete?");
-            return x;
+            return confirm("Are you sure you want to delete?");
 
         }
 

@@ -8,181 +8,53 @@
 
 @section('content')
 
+    <!-- content-wrapper -->
+
     <div class="content-wrapper">
+
+        <!-- container -->
 
         <div class="container">
 
-        <!-- Content Header (Page header) -->
+            <!-- content-header has breadcrumbs -->
 
-        <section class="content-header">
-
-
-            <ol class="breadcrumb">
-
-                <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
-                <li><a href="/marketing-image">Marketing Images</a></li>
-                <li class="active">Marketing Images</li>
-
-            </ol>
-
-        </section>
-
-        <!-- Main content -->
-        <section class="content">
-            <div class="container">
-                <div class="row">
+            <section class="content-header">
 
 
-                    <div class ="col-xs-4">
+                <ol class="breadcrumb">
 
-                    <h1>Create Marketing Image</h1>
+                    <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
+                    <li><a href="/marketing-image">Marketing Images</a></li>
+                    <li class="active">Marketing Images</li>
 
+                </ol>
 
+            </section>
 
-                    <form class="form form-border" role="form" method="POST"
-                          action="{{ url('/marketing-image') }}"
-                          enctype="multipart/form-data">
+            <!-- end content-header -->
 
-                    {{ csrf_field() }}
+            <!-- content has form -->
 
-                    <!-- image_name Form Input -->
+            <section class="content">
 
-                        <div class="form-group{{ $errors->has('image_name') ? ' has-error' : '' }}">
+                        <div class="col-xs-4">
 
-                            <label class="control-label">Image Name</label>
+                            <h2 class="min-width-200">Create Image</h2>
 
-                            <input type="text"
-                                   class="form-control"
-                                   name="image_name"
-                                   value="{{ old('image_name') }}"
-                                   placeholder="enter image name...">
-
-                            @if ($errors->has('image_name'))
-
-                                <span class="help-block">
-                <strong>{{ $errors->first('image_name') }}</strong>
-                </span>
-
-                            @endif
+                                @include('marketing-image.create-form')
 
                         </div>
 
-                        <!-- is_active Form Input -->
+            </section>
 
-
-
-                        <div class="form-group{{ $errors->has('is_active') ? ' has-error' : '' }}">
-
-                            <label class="control-label">Is Active</label>
-
-
-                            <select class="form-control" id="is_active" name="is_active">
-                                <option value="{{old('is_active')}}">
-                                    {{ ! is_null(old('is_active')) ?
-                                    (old('is_active') == 1 ? 'Yes' :'No')
-                                    : 'Please Choose One'}}</option>
-                                <option value="1">Yes</option>
-                                <option value="0">No</option>
-                            </select>
-
-
-                            @if ($errors->has('is_active'))
-
-                                <span class="help-block">
-                <strong>{{ $errors->first('is_active') }}</strong>
-                </span>
-
-                            @endif
-
-                        </div>
-
-                        <!-- is_featured Form Input -->
-
-                        <div class="form-group{{ $errors->has('is_featured') ? ' has-error' : '' }}">
-
-                            <label class="control-label">Is Featured</label>
-
-
-                            <select class="form-control" id="is_featured" name="is_featured">
-                                <option value="{{old('is_featured')}}">
-                                    {{ ! is_null(old('is_featured')) ?
-                                    (old('is_featured') == 1 ? 'Yes' :'No')
-                                    : 'Please Choose One'}}</option>
-                                <option value="1">Yes</option>
-                                <option value="0">No</option>
-                            </select>
-
-
-                            @if ($errors->has('is_featured'))
-
-                                <span class="help-block">
-                <strong>{{ $errors->first('is_featured') }}</strong>
-                </span>
-
-                            @endif
-
-                        </div>
-
-                        <!-- image_weight Form Input -->
-
-                        <div class="form-group{{ $errors->has('image_weight') ? ' has-error' : '' }}">
-
-                            <label class="control-label">Image Weight</label>
-
-                            <input type="number" class="form-control" name="image_weight" value="{{ old('image_weight') ? old('image_weight') : 100 }}">
-
-                            @if ($errors->has('image_weight'))
-
-                                <span class="help-block">
-                <strong>{{ $errors->first('image_weight') }}</strong>
-                </span>
-
-                            @endif
-
-                        </div>
-
-                        <!-- image file Form Input -->
-
-                        <div class="form-group{{ $errors->has('image') ? ' has-error' : '' }}">
-
-                            <div class="form-group">
-                                <label class="control-label">Primary Image
-                                </label>
-
-                                <input type="file" name="image" id="image">
-                            </div>
-
-                            @if ($errors->has('image'))
-
-                                <span class="help-block">
-                <strong>{{ $errors->first('image') }}</strong>
-                </span>
-
-                            @endif
-
-
-                            <div class="form-group">
-
-                                <button type="submit" class="btn btn-primary btn-lg">
-
-                                    Create
-
-                                </button>
-
-                            </div>
-                        </div>
-                    </form>
-                        </div>
-
-                </div>
-            </div>
-            <!-- /.row -->
-        </section>
-        <!-- /.content -->
+            <!-- end content section -->
 
         </div>
-    </div>
-    <!-- /.content-wrapper -->
 
+        <!-- end container -->
+
+    </div>
+
+    <!-- end content-wrapper -->
 
 @endsection
