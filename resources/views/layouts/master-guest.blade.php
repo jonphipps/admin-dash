@@ -4,7 +4,9 @@
 
     @include('layouts.guest-partials.meta')
 
-        @yield('title')
+    @yield('title')
+
+    <!-- guest-partials.css index page css -->
 
     @include('layouts.guest-partials.css')
 
@@ -19,31 +21,41 @@
 
 <body class="hold-transition skin-blue layout-top-nav">
 
+<!-- body-fill for consistency with /home view -->
+
 <div class="body-fill">
 
     @include('layouts.guest-partials.facebook')
 
+    <!-- app Vue.js wrapper -->
+
     <div id="app">
 
-    @include('layouts.guest-partials.top-nav')
+        @include('layouts.guest-partials.top-nav')
 
-        <div class="pin-pad">
+        <!-- top-pin-pad -->
 
-    @yield('content')
+        <div class="top-pin-pad">
 
-    @include('layouts.common-partials.footer')
+            @yield('content')
 
-
+            @include('layouts.guest-partials.footer')
 
         </div>
 
+        <!-- end top-pin-pad -->
+
     </div>
+
+    <!-- end app Vue.js wrapper -->
 
     @include('layouts.guest-partials.scripts')
 
     @yield('scripts')
 
 </div>
+
+<!-- end body-fill -->
 
 </body>
 

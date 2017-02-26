@@ -109,3 +109,20 @@ table thead tr th {
 .min-width-300 {
   min-width: 200px;
 }
+
+.guest-footer {
+  background: #fff;
+  padding: 15px;
+  width: auto;
+  color: #444;
+  border-top: 1px solid #d2d6de;
+  position: relative;
+  clear: both;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.body-fill {
+  margin-top: 10px;
+  margin-bottom: 50px;
+}

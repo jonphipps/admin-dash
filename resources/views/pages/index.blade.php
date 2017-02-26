@@ -1,77 +1,111 @@
-
 @extends('layouts.master-guest')
-
 
 @section('content')
 
-
-    <!-- Full Width Column -->
+    <!-- content wrapper -->
 
     <div class="content-wrapper">
 
+        <!-- container -->
+
         <div class="container">
 
-            <!-- Content Header (Page header) -->
+            <!-- content-header has breadcrumbs -->
 
             <section class="content-header">
 
                 <div class="grid-results">
-                <div
-                        class="fb-like"
-                        data-share="true"
-                        data-width="450"
-                        data-show-faces="true">
+
+                    <div class="fb-like"
+                         data-share="true"
+                         data-width="450"
+                         data-show-faces="true">
+                    </div>
+
                 </div>
-                </div>
+
                 <h1>
                     Free Template
                     <small>For Laravel 5.4</small>
                 </h1>
+
                 <ol class="breadcrumb">
                     <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
                     <li><a href="#">Landing</a></li>
                     <li class="active">Site Landing Page</li>
                 </ol>
+
             </section>
 
-            <!-- Main content -->
+            <!-- end content-header -->
+
+            <!-- content -->
+
             <section class="content">
 
                 @include('admin.components.admin-v1.map')
 
+                <!-- box -->
+
                 <div class="box box-default">
+
+                    <!-- box-header -->
+
                     <div class="box-header with-border">
+
                         <h1>Foundation Maker Helps You Get Started</h1>
+
                     </div>
+
+                    <!-- end box-header -->
+
+                    <!-- box-body -->
+
                     <div class="box-body">
+
                         Let's make something great...
+
                     </div>
-                    <!-- /.box-body -->
+
+                    <!--  end box-body -->
+
                 </div>
-                <!-- /.box -->
+
+                <!-- end box -->
+
             </section>
-            <!-- /.content -->
+
+            <!-- end content section -->
+
         </div>
-        <!-- /.container -->
+
+        <!--  end container -->
+
     </div>
-    <!-- /.content-wrapper -->
+    <!-- end content-wrapper -->
 
 
-    @endsection
+@endsection
 
 @section('scripts')
 
     <!-- Sparkline -->
+
     <script src="plugins/sparkline/jquery.sparkline.min.js"></script>
+
     <!-- jvectormap -->
     <script src="plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+
     <script src="plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+
     <!-- SlimScroll 1.3.0 -->
     <script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
+
     <!-- Sparkline -->
     <script src="plugins/sparkline/jquery.sparkline.min.js"></script>
     
     <!-- AdminLTE for demo purposes -->
+
     <script>
 
         /* jVector Maps
@@ -163,5 +197,5 @@
     </script>
 
 
-    @endsection
+@endsection
 

@@ -28,7 +28,7 @@
 
     }
 
-    .pin-pad{
+    .top-pin-pad{
 
         padding-top: 50px;
 
