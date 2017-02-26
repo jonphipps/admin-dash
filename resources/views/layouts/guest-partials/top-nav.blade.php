@@ -10,11 +10,11 @@
 
             @if(! Auth::check())
 
-            <a class="navbar-brand logo-size" href="/"><b>Foundation</b> MAKER</a>
+            <a class="navbar-brand logo-size" href="/"><b>Admin</b> DASH</a>
 
             @else
 
-            <a class="navbar-brand logo-size" href="/home"><b>Foundation</b> MAKER</a>
+            <a class="navbar-brand logo-size" href="/home"><b>Admin</b> DASH</a>
 
             @endif
 

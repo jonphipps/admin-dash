@@ -4,9 +4,9 @@
     <!-- Logo -->
     <a href="/home" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
-        <span class="logo-mini"><b>F</b>MK</span>
+        <span class="logo-mini"><b>A</b>DS</span>
         <!-- logo for regular state and mobile devices -->
-        <span class="logo-lg"><b>Foundation</b>Maker</span>
+        <span class="logo-lg"><b>Admin</b> DASH</span>
     </a>
 
     <!-- Header Navbar -->

@@ -42,6 +42,21 @@
             </li>
             <li class="treeview">
                 <a href="#">
+                    <i class="fa fa-object-group"></i>
+                    <span> Site Pages</span>
+                    <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="/user"><i class="fa fa-circle-o"></i> Users</a></li>
+                    <li><a href="/profile"><i class="fa fa-circle-o"></i> Profiles</a></li>
+                    <li><a href="/marketing-image"><i class="fa fa-circle-o"></i> Marketing Images</a></li>
+                    <li><a href="/widget"><i class="fa fa-circle-o"></i> Widgets</a></li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#">
                     <i class="fa fa-files-o"></i>
                     <span>Layout Options</span>
                     <span class="pull-right-container">

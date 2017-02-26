@@ -53,7 +53,7 @@
 
                     <div class="box-header with-border">
 
-                        <h1>Foundation Maker Helps You Get Started</h1>
+                        <h1>Admin Dash Helps You Get Started</h1>
 
                     </div>
 
