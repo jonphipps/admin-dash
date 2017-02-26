@@ -14,11 +14,11 @@
 
 @section('content')
 
-    <!-- Content Wrapper. Contains page content -->
+    <!-- content-wrapper -->
 
     <div class="content-wrapper">
 
-        <!-- Content Header (Page header) -->
+        <!-- content-header has breadcrumbs -->
 
         <section class="content-header">
 
@@ -39,11 +39,17 @@
 
         </section>
 
+        <!-- end content-header section -->
+
+        <!-- dashboard components -->
+
         @include('admin.components.admin-v1.dash')
+
+        <!-- end dashboard components -->
 
     </div>
 
-    <!-- /.content-wrapper -->
+    <!--  end content-wrapper -->
 
 @endsection
 
