@@ -8,6 +8,7 @@ Admin-Dash is a start-up template implementing the [Admin LTE](https://almsaeeds
 
 In addition to the Admin LTE implementation, Admin-Dash also includes Facebook and Github integration through Socialite.  Working datagrids, with pagination, column sorts and search, using Vue.js and various other features found in the [book](https://leanpub.com/laravel-5-4-for-beginners).
 
+If you would like to help support the development of Admin-Dash, there is no donation button, however, contributions can be made by [purchasing the book](https://leanpub.com/laravel-5-4-for-beginners).
 
 ## Installation
 
