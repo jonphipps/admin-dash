@@ -90,12 +90,10 @@
 @section('scripts')
 
     <!-- Sparkline -->
-
     <script src="plugins/sparkline/jquery.sparkline.min.js"></script>
 
     <!-- jvectormap -->
     <script src="plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-
     <script src="plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
 
     <!-- SlimScroll 1.3.0 -->
@@ -104,7 +102,7 @@
     <!-- Sparkline -->
     <script src="plugins/sparkline/jquery.sparkline.min.js"></script>
     
-    <!-- AdminLTE for demo purposes -->
+    <!-- map script -->
 
     <script>
 

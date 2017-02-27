@@ -34,7 +34,7 @@
 
         <div class="login-box">
             <div class="login-logo">
-                <a href="/"><b>Foundation</b>MAKER</a>
+                <a href="/"><b>Admin</b>DASH</a>
             </div>
             <!-- /.login-logo -->
             <div class="login-box-body">
@@ -105,15 +105,7 @@
                     </div>
                 </form>
 
-                <div class="social-auth-links text-center">
-                    <p>- OR -</p>
-                    <a href="/auth/facebook" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign in using
-                        Facebook</a>
-                    <a href="/auth/github" class="btn btn-block btn-social btn-github">
-                        <i class="fa fa-github"></i> Sign in with GitHub
-                    </a>
-                </div>
-                <!-- /.social-auth-links -->
+                @include('auth.social-sign-in-links')
 
                 <a href="{{ url('/password/reset') }}">I forgot my password</a><br>
                 <a href="/register" class="text-center">Register a new membership</a>

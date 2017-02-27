@@ -8,152 +8,61 @@
 
 @section('content')
 
-    <!-- Content Wrapper. Contains page content -->
+    <!-- content-wrapper -->
 
     <div class="content-wrapper">
 
+        <!-- container -->
+
         <div class="container">
 
-            <!-- Content Header (Page header) -->
+            <!-- content-header has breadcrumbs -->
 
             <section class="content-header">
 
 
+                <ol class="breadcrumb">
 
-            <ol class="breadcrumb">
+                    <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
+                    <li><a href="/register">Register</a></li>
+                    <li class="active">Register</li>
 
-                <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
-                <li><a href="/register">Register</a></li>
-                <li class="active">Register</li>
+                </ol>
 
-            </ol>
+            </section>
 
-        </section>
+            <!-- end content-header section -->
 
-        <section class="content">
+            <!-- content has form -->
 
-        <div class="register-box">
-            <div class="register-logo">
-                <a href="/"><b>Foundation</b>MAKER</a>
-            </div>
+            <section class="content">
 
-            <div class="register-box-body">
-                <p class="login-box-msg">Register a new membership</p>
+                <div class="register-box">
 
-                <form  method="POST" action="{{ url('/register') }}">
+                    <div class="register-logo">
 
-                    {{ csrf_field() }}
-
-                    <div class="form-group has-feedback{{ $errors->has('name') ? ' has-error' : '' }}">
-                        <input id="name"
-                               name="name"
-                               type="text"
-                               class="form-control"
-                               value="{{ old('name') }}"
-                               placeholder="Full Name"
-                               required autofocus>
-                        <span class="glyphicon glyphicon-user form-control-feedback"></span>
-
-                        @if ($errors->has('name'))
-                            <span class="help-block">
-                                        <strong>{{ $errors->first('name') }}</strong>
-                                    </span>
-                        @endif
-
-                    </div>
-                    <div class="form-group has-feedback{{ $errors->has('email') ? ' has-error' : '' }}">
-                        <input id="email"
-                               type="email"
-                               name="email"
-                               class="form-control"
-                               value="{{ old('email') }}"
-                               placeholder="email"
-                               required autofocus>
-                        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-                    </div>
-
-                    @if ($errors->has('email'))
-                        <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                    @endif
-
-                    <div class="form-group has-feedback{{ $errors->has('password') ? ' has-error' : '' }}">
-                        <input id="password"
-                               type="password"
-                               name="password"
-                               class="form-control"
-                               placeholder="Password"
-                               required>
-                        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-
-                        @if ($errors->has('password'))
-                            <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                        @endif
+                        <a href="/"><b>Admin</b>DASH</a>
 
                     </div>
 
-                    <div class="form-group has-feedback">
-                        <input  id="password-confirm"
-                                name="password_confirmation"
-                                type="password"
-                                class="form-control"
-                                placeholder="Retype password"
-                                required>
-                        <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
-                    </div>
+                    <div class="register-box-body">
 
-                    <div class="row">
-                        <div class="col-xs-8">
-                            <div class="checkbox">
-                                <label class="{{ $errors->has('terms') ? ' has-error' : '' }}">
-                                    <input type="checkbox" name="terms" required> I agree to the <a href="/terms">terms</a>
-                                </label>
+                        <p class="login-box-msg">Register a new membership</p>
 
-                                @if ($errors->has('terms'))
-                                    <span class="help-block"><strong>{{ $errors->first('terms') }}</strong></span>
-                                @endif
+                        <div>
+                            @include('auth.register-form')
 
-                            </div>
                         </div>
 
-                        <div class="col-xs-8">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="is_subscribed"> Subscribe to Newsletter?
-                                </label>
-                            </div>
-                        </div>
+                        @include('auth.social-sign-in-links')
 
-                        <!-- /.col -->
-                        <div class="col-xs-4">
-                            <button type="submit" class="btn btn-primary btn-block btn-flat">Register</button>
-                        </div>
-                        <!-- /.col -->
-
+                        <a href="/login" class="text-center">I already have a membership</a>
                     </div>
-
-                </form>
-
-                <div class="social-auth-links text-center">
-                    <p>- OR -</p>
-                    <a href="/auth/facebook" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign in using
-                        Facebook</a>
-                    <a href="/auth/github" class="btn btn-block btn-social btn-github">
-                        <i class="fa fa-github"></i> Sign in with GitHub
-                    </a>
+                    <!-- /.form-box -->
                 </div>
+                <!-- /.register-box -->
 
-                <a href="/login" class="text-center">I already have a membership</a>
-            </div>
-            <!-- /.form-box -->
-        </div>
-        <!-- /.register-box -->
-
-        </section>
-
+            </section>
 
 
         </div>
