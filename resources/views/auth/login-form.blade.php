@@ -3,7 +3,7 @@
 
        {{ csrf_field() }}
 
-    <!-- email -->
+    <!-- email input -->
 
     <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
 
@@ -31,9 +31,9 @@
 
     </div>
 
-    <!-- end email -->
+    <!-- end email input -->
 
-    <!-- password -->
+    <!-- password input -->
 
     <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
 
@@ -60,7 +60,7 @@
 
     </div>
 
-    <!-- end password -->
+    <!-- end password input -->
 
     <!-- row for remember me and submit -->
 

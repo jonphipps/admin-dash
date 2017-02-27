@@ -41,13 +41,17 @@
 
                     <div class="panel panel-default">
 
+                        <!-- show table -->
+
                         @include('widget.table-show')
+
+                        <!-- end table -->
 
                     </div>
 
             </section>
 
-            <!-- end content table section -->
+            <!-- end content section -->
 
         </section>
 

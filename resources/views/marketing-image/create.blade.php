@@ -37,13 +37,17 @@
 
             <section class="content">
 
-                        <div class="col-xs-4">
+                <div class="col-xs-4">
 
-                            <h2 class="min-width-200">Create Image</h2>
+                    <h2 class="min-width-200">Create Image</h2>
 
-                                @include('marketing-image.create-form')
+                    <!-- create form -->
 
-                        </div>
+                    @include('marketing-image.create-form')
+
+                    <!-- end create form -->
+
+                </div>
 
             </section>
 

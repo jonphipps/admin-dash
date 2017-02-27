@@ -16,7 +16,7 @@
 
         <div class="container">
 
-            <!-- Content Header (Page header) -->
+            <!-- content-header has breadcrumbs -->
 
             <section class="content-header">
 
@@ -30,7 +30,7 @@
 
             </section>
 
-            <!-- end content header -->
+            <!-- end content-header section -->
 
             <!-- content holds data grid -->
 

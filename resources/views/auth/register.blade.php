@@ -50,24 +50,44 @@
                         <p class="login-box-msg">Register a new membership</p>
 
                         <div>
+
+                            <!-- register form -->
+
                             @include('auth.register-form')
+
+                            <!-- end register form -->
 
                         </div>
 
+                        <!-- social sign in links -->
+
                         @include('auth.social-sign-in-links')
 
-                        <a href="/login" class="text-center">I already have a membership</a>
+                        <!-- social sign in links -->
+
+                        <a href="/login"
+                           class="text-center">
+                            I already have a membership
+                        </a>
+
                     </div>
-                    <!-- /.form-box -->
+
+                    <!-- end form-box -->
                 </div>
-                <!-- /.register-box -->
+
+                <!-- end register-box -->
 
             </section>
 
+            <!-- end content section -->
 
         </div>
 
+        <!-- end container -->
+
     </div>
+
+    <!-- end content-wrapper -->
 
 @endsection
 

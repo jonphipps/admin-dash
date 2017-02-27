@@ -37,13 +37,23 @@
 
             <section class="content">
 
+                <!-- user name -->
+
                 <div class="margin-10">
+
                     <h2 class="min-width-200">{{ $user->name }}</h2>
+
                 </div>
+
+                <!-- end user name -->
 
                 <div class="panel panel-default">
 
+                    <!-- show table -->
+
                     @include('user.table-show')
+
+                    <!-- end show table -->
 
                 </div>
 

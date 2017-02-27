@@ -5,7 +5,7 @@
 
       {{ csrf_field() }}
 
-    <!-- first_name form input -->
+    <!-- first_name input -->
 
     <div class="form-group{{ $errors->has('first_name') ? ' has-error' : '' }}">
 
@@ -26,9 +26,9 @@
 
     </div>
 
-    <!-- end first_name form input -->
+    <!-- end first_name input -->
 
-    <!-- last_name form input -->
+    <!-- last_name input -->
 
     <div class="form-group{{ $errors->has('last_name') ? ' has-error' : '' }}">
 
@@ -49,9 +49,9 @@
 
     </div>
 
-    <!-- end last_name form input -->
+    <!-- end last_name input -->
 
-    <!-- birthdate form input -->
+    <!-- birthdate date picker -->
 
     <div class="form-group{{ $errors->has('birthdate') ? ' has-error' : '' }}">
 
@@ -73,9 +73,9 @@
 
     </div>
 
-    <!-- end birthdate Form Input -->
+    <!-- end birthdate date picker -->
 
-    <!-- gender form input -->
+    <!-- gender select -->
 
     <div class="form-group{{ $errors->has('gender') ? ' has-error' : '' }}">
 
@@ -104,7 +104,7 @@
 
     </div>
 
-    <!-- end gender form input -->
+    <!-- end gender select -->
 
     <!-- submit button -->
 

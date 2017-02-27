@@ -40,7 +40,11 @@
 
                     <h2 class="min-width-200">Create Widget</h2>
 
+                        <!-- create form -->
+
                         @include('widget.create-form')
+
+                        <!-- end create form -->
 
                 </div>
 

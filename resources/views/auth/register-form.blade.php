@@ -3,7 +3,7 @@
 
       {{ csrf_field() }}
 
-    <!-- name -->
+    <!-- name input -->
 
     <div class="form-group has-feedback{{ $errors->has('name') ? ' has-error' : '' }}">
 
@@ -27,9 +27,9 @@
 
     </div>
 
-    <!-- end name -->
+    <!-- end name input -->
 
-    <!-- email -->
+    <!-- email input -->
 
     <div class="form-group has-feedback{{ $errors->has('email') ? ' has-error' : '' }}">
 
@@ -53,9 +53,9 @@
 
     </div>
 
-    <!-- end email -->
+    <!-- end email input -->
 
-    <!-- password -->
+    <!-- password input -->
 
     <div class="form-group has-feedback{{ $errors->has('password') ? ' has-error' : '' }}">
 
@@ -78,9 +78,9 @@
 
     </div>
 
-    <!-- end password -->
+    <!-- end password input -->
 
-    <!-- password confirmation-->
+    <!-- password confirmation -->
 
     <div class="form-group has-feedback">
 
@@ -95,7 +95,7 @@
 
     </div>
 
-    <!-- end password confirmation-->
+    <!-- end password confirmation -->
 
     <!-- row needed for separation of social links -->
 

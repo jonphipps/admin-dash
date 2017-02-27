@@ -34,66 +34,68 @@
 
             <section class="content">
 
-                        <div class="col-xs-4">
+                <div class="col-xs-4">
 
-                            <h2 class="min-width-200">Edit Image</h2>
+                    <h2 class="min-width-200">Edit Image</h2>
 
-                            <!-- begin form border -->
+                    <!-- begin form border -->
 
-                            <div class="form-border">
+                    <div class="form-border">
 
-                                <div>
+                        <div>
 
-                                    <div class="control-label">
+                            <div class="control-label">
 
-                                        Image Name:
-
-                                    </div>
-
-                                    <h4>
-
-                                        {{ $marketingImage->image_name
-                                           . '.'
-                                           . $marketingImage->image_extension }}
-
-                                    </h4>
-
-                                </div>
-
-                                <div class="control-label">
-
-                                    Thumbnail:
-
-                                </div>
-
-                                <!-- image thumbnail -->
-
-                                <div class="margin-top-10 margin-bottom-10">
-
-                                    <img src="{{ $marketingImage->showImage($marketingImage, $thumbnailPath) }}">
-
-                                </div>
-
-                                <!-- form with update button -->
-
-                                @include('marketing-image.edit-form')
-
-                                <!-- end form with update button -->
-
-                                <!-- delete button outside other form,
-                                     but included in form border -->
-
-                                @include('marketing-image.delete-button')
-
-                                <!-- end delete button -->
+                                Image Name:
 
                             </div>
 
-                            <!-- end form border -->
+                                <h4>
+
+                                    {{ $marketingImage->image_name
+                                        . '.'
+                                        . $marketingImage->image_extension }}
+
+                                </h4>
 
                         </div>
 
-                        <!-- end col-xs-4 -->
+                        <div class="control-label">
+
+                            Thumbnail:
+
+                        </div>
+
+                        <!-- image thumbnail -->
+
+                        <div class="margin-top-10 margin-bottom-10">
+
+                            <img src="{{ $marketingImage->showImage($marketingImage, $thumbnailPath) }}">
+
+                        </div>
+
+                        <!-- end image thumbnail -->
+
+                        <!-- edit form with update button -->
+
+                        @include('marketing-image.edit-form')
+
+                        <!-- end edit form with update button -->
+
+                        <!-- delete button outside other form,
+                          but included in form border -->
+
+                        @include('marketing-image.delete-button')
+
+                        <!-- end delete button -->
+
+                    </div>
+
+                    <!-- end form border -->
+
+                </div>
+
+                <!-- end col-xs-4 -->
 
             </section>
 
@@ -115,8 +117,7 @@
 
         function ConfirmDelete() {
 
-            var x = confirm("Are you sure you want to delete?");
-            return x;
+            return confirm("Are you sure you want to delete?");
 
         }
 

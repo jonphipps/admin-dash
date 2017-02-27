@@ -41,12 +41,17 @@
 
                     <div class="panel panel-default">
 
+                        <!-- show table -->
+
                         @include('marketing-image.table-show')
 
+                        <!-- show table -->
 
                     </div>
 
             </section>
+
+            <!-- end content section -->
 
         </div>
 

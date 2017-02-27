@@ -31,7 +31,7 @@
 
             </section>
 
-            <!-- end content-header -->
+            <!-- end content-header section -->
 
             <!-- content holds form -->
 
@@ -41,7 +41,11 @@
 
                     <h2 class="min-width-200">Edit Widget</h2>
 
+                    <!-- edit form -->
+
                     @include('widget.edit-form')
+
+                    <!-- end edit form -->
 
                 </div>
 

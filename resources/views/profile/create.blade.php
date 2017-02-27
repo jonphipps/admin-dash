@@ -40,7 +40,11 @@
 
                      <h2 class="min-width-200">Create Profile</h2>
 
+                     <!-- create-form -->
+
                      @include('profile.create-form')
+
+                    <!-- end create-form -->
 
                  </div>
 

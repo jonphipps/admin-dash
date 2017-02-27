@@ -9,7 +9,7 @@
 
            {{ csrf_field() }}
 
-    <!-- name form input -->
+    <!-- name input -->
 
     <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
 
@@ -30,9 +30,9 @@
 
     </div>
 
-    <!-- end name form input -->
+    <!-- end name input -->
 
-    <!-- is_admin form input -->
+    <!-- is_admin select -->
 
     <div class="form-group{{ $errors->has('is_admin') ? ' has-error' : '' }}">
 
@@ -61,7 +61,7 @@
 
     </div>
 
-    <!-- end is_admin form input -->
+    <!-- end is_admin select -->
 
     <!-- submit button -->
 

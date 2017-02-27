@@ -5,7 +5,7 @@
 
       {{ csrf_field() }}
 
-    <!-- user name form input -->
+    <!-- user name input -->
 
     <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
 
@@ -26,9 +26,9 @@
 
     </div>
 
-    <!-- end user name form input -->
+    <!-- end user name input -->
 
-    <!-- email form input -->
+    <!-- email input -->
 
     <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
 
@@ -50,9 +50,9 @@
 
     </div>
 
-    <!-- end email form input -->
+    <!-- end email input -->
 
-    <!-- is_subscribed form input -->
+    <!-- is_subscribed select -->
 
     <div class="form-group{{ $errors->has('is_subscribed') ? ' has-error' : '' }}">
 
@@ -80,7 +80,7 @@
 
     </div>
 
-    <!-- end is_subscribed form input -->
+    <!-- end is_subscribed select -->
 
     <!-- submit button -->
 

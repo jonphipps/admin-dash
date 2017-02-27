@@ -10,7 +10,7 @@
 
       {{ csrf_field() }}
 
-    <!-- is_active form input -->
+    <!-- is_active select -->
 
     <div class="form-group{{ $errors->has('is_active') ? ' has-error' : '' }}">
 
@@ -39,9 +39,9 @@
 
     </div>
 
-    <!-- end is_active form input -->
+    <!-- end is_active select -->
 
-    <!-- is_featured form input -->
+    <!-- is_featured select -->
 
     <div class="form-group{{ $errors->has('is_featured') ? ' has-error' : '' }}">
 
@@ -65,15 +65,15 @@
 
             <span class="help-block">
                 <strong>{{ $errors->first('is_featured') }}</strong>
-                </span>
+            </span>
 
         @endif
 
     </div>
 
-    <!-- end is_featured form input -->
+    <!-- end is_featured select -->
 
-    <!-- image_weight form input -->
+    <!-- image_weight input -->
 
     <div class="form-group{{ $errors->has('image_weight') ? ' has-error' : '' }}">
 
@@ -94,9 +94,9 @@
 
     </div>
 
-    <!-- end image_weight form input -->
+    <!-- end image_weight input -->
 
-    <!-- image file form input -->
+    <!-- image file input -->
 
     <div class="form-group{{ $errors->has('image') ? ' has-error' : '' }}">
 
@@ -116,7 +116,7 @@
 
     </div>
 
-    <!-- end image file form input -->
+    <!-- end image file input -->
 
     <!-- submit button -->
 

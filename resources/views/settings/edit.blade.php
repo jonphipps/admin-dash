@@ -40,7 +40,11 @@
 
                     <h2 class="min-width-200">Update {{ $user->name }}</h2>
 
+                        <!-- settings form -->
+
                         @include('settings.form')
+
+                        <!-- end settings form -->
 
                 </div>
 

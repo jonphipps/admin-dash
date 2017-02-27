@@ -5,7 +5,7 @@
 
       {{ csrf_field() }}
 
-    <!-- widget name Form Input -->
+    <!-- widget name input -->
 
     <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
 
@@ -26,7 +26,7 @@
 
     </div>
 
-    <!-- end widget name Form Input -->
+    <!-- end widget name input -->
 
     <!-- submit button -->
 

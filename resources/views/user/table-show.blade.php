@@ -99,7 +99,7 @@
 
             <td>{{ $user->created_at->format('m-d-Y') }}</td>
 
-            <!-- end joined -->
+            <!-- end joined date -->
 
 
 
@@ -115,7 +115,7 @@
 
                 <!-- end edit button -->
 
-                <!-- delete button & form -->
+                <!-- delete button -->
 
                 <td>
 
@@ -139,7 +139,7 @@
 
                 </td>
 
-                <!-- end delete button & form -->
+                <!-- end delete button -->
 
             @endif
 

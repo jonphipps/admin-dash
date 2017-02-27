@@ -38,7 +38,11 @@
 
                     <h2 class="min-width-200">Edit User</h2>
 
+                    <!-- edit form -->
+
                     @include('user.edit-form')
+
+                    <!-- end edit form -->
 
                 </div>
 

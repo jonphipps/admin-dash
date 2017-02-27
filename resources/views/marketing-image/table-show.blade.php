@@ -94,6 +94,8 @@
 
         <td>
 
+            <!-- pull-left -->
+
             <div class="pull-left">
 
                 <!-- edit button -->

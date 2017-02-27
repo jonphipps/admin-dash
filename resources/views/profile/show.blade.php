@@ -38,17 +38,29 @@
 
                         <div class="col-xs-8">
 
+                            <!-- user name -->
+
                             <h2 class="min-width-200">{{ $profile->fullName() }}</h2>
+
+                            <!-- end user name -->
+
+                            <!-- user gravatar-->
 
                             <img src="{{ Gravatar::get(Auth::user()->email)  }}"
                                  class="img-circle"
                                  alt="User Image">
 
+                            <!-- end user gravatar -->
+
                             <div class="panel panel-default margin-bottom-10">
 
                                 <div class="box-body table-responsive no-padding">
 
+                                    <!-- show table -->
+
                                     @include('profile.table-show')
+
+                                    <!-- end show table -->
 
                                 </div>
 
