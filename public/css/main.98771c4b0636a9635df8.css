@@ -126,3 +126,13 @@ table thead tr th {
   margin-top: 10px;
   margin-bottom: 50px;
 }
+
+.submit-email-button {
+  margin-top: 20px;
+  margin-left: 70px;
+}
+
+.reset-password-button {
+  margin-top: 20px;
+  margin-left: 95px;
+}

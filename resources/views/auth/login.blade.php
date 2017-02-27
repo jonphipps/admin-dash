@@ -8,118 +8,85 @@
 
 @section('content')
 
-    <!-- Content Wrapper. Contains page content -->
+    <!-- content-wrapper -->
 
     <div class="content-wrapper">
 
+        <!-- container -->
+
         <div class="container">
 
-        <!-- Content Header (Page header) -->
+            <!-- content-header with breadcrumbs -->
 
-        <section class="content-header">
+            <section class="content-header">
 
+                <ol class="breadcrumb">
 
+                    <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
+                    <li><a href="/login">Login</a></li>
+                    <li class="active">Login</li>
 
-            <ol class="breadcrumb">
+                </ol>
 
-                <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
-                <li><a href="/login">Login</a></li>
-                <li class="active">Login</li>
+            </section>
 
-            </ol>
+            <!-- end content-header section -->
 
-        </section>
+            <!-- content -->
 
-        <section class="content">
+            <section class="content">
 
-        <div class="login-box">
-            <div class="login-logo">
-                <a href="/"><b>Admin</b>DASH</a>
-            </div>
-            <!-- /.login-logo -->
-            <div class="login-box-body">
-                <p class="login-box-msg">Sign in to start your session</p>
+                <!-- login box -->
 
-                <form  method="POST" action="{{ url('/login') }}">
+                <div class="login-box">
 
-                    {{ csrf_field() }}
+                    <div class="login-logo">
 
-                    <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-
-                        <div class="form-group has-feedback">
-
-                            <input id="email"
-                                   type="email"
-                                   class="form-control"
-                                   name="email"
-                                   value="{{ old('email') }}"
-                                   placeholder="enter your email..."
-                                   required autofocus>
-
-                            <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-
-                            @if ($errors->has('email'))
-                                <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                            @endif
-
-                        </div>
+                        <a href="/"><b>Admin</b>DASH</a>
 
                     </div>
 
-                    <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                    <!-- login-box-body -->
 
+                    <div class="login-box-body">
 
-                        <div class="form-group has-feedback">
-                            <input id="password"
-                                   type="password"
-                                   class="form-control"
-                                   name="password"
-                                   placeholder="Password"
-                                   required>
+                        <p class="login-box-msg">Sign in to start your session</p>
 
-                            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                        <!-- login form -->
 
-                            @if ($errors->has('password'))
-                                <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                            @endif
-                        </div>
+                        @include('auth.login-form')
+
+                        <!-- end login form -->
+
+                        <!-- social sign in links -->
+
+                        @include('auth.social-sign-in-links')
+
+                        <!-- end social sign in links -->
+
+                        <!-- password reset and register links -->
+
+                        <a href="{{ url('/password/reset') }}">I forgot my password</a><br>
+                        <a href="/register" class="text-center">Register a new membership</a>
+
                     </div>
 
-                    <div class="row">
-                        <div class="col-xs-8">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
-                                </label>
-                            </div>
-                        </div>
-                        <!-- /.col -->
-                        <div class="col-xs-4">
-                            <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
-                        </div>
-                        <!-- /.col -->
-                    </div>
-                </form>
+                    <!-- end login-box-body -->
 
-                @include('auth.social-sign-in-links')
+                </div>
 
-                <a href="{{ url('/password/reset') }}">I forgot my password</a><br>
-                <a href="/register" class="text-center">Register a new membership</a>
+                <!-- end login-box -->
 
-            </div>
-            <!-- /.login-box-body -->
+            </section>
+
+            <!-- end section content-->
+
         </div>
-        <!-- /.login-box -->
 
-        </section>
-
-    </div>
+        <!-- end container -->
 
     </div>
 
+    <!-- end content-wrapper -->
 
 @endsection

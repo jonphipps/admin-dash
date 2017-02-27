@@ -10,118 +10,97 @@
 
     <style>
 
-        .submit-email-button{
 
-
-            margin-top:  20px;
-
-            margin-left:  70px;
-
-        }
 
     </style>
 
-    @endsection
+@endsection
 
 @section('content')
 
-    <!-- Content Wrapper. Contains page content -->
+    <!-- content-wrapper -->
 
     <div class="content-wrapper">
 
-        <!-- Content Header (Page header) -->
+        <!-- container -->
 
         <div class="container">
 
-            <!-- Content Header (Page header) -->
+            <!-- content-header -->
 
             <section class="content-header">
 
 
-            <ol class="breadcrumb">
+                <ol class="breadcrumb">
 
-                <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
-                <li><a href="/password/reset">Reset Password</a></li>
-                <li class="active">Reset Password</li>
+                    <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
+                    <li><a href="/password/reset">Reset Password</a></li>
+                    <li class="active">Reset Password</li>
 
-            </ol>
+                </ol>
 
             </section>
 
-        <section class="content">
+            <!-- end content-header -->
 
-        <div class="login-box">
+            <!-- content -->
 
-            @if (session('status'))
-                <div class="alert alert-success">
-                    {{ session('status') }}
-                </div>
-            @endif
-            <div class="login-logo">
-                <a href="/"><b>Reset</b> PASSWORD</a>
-            </div>
-            <!-- /.login-logo -->
-            <div class="login-box-body">
-                <p class="login-box-msg">Enter your email for password recovery</p>
+            <section class="content">
 
-                <form role="form" method="POST" action="{{ url('/password/email') }}">
+                <!-- login-box -->
 
-                    {{ csrf_field() }}
+                <div class="login-box">
 
-                    <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                        @if (session('status'))
 
-                        <div class="form-group has-feedback">
+                        <div class="alert alert-success">
 
-                            <input id="email"
-                                   type="email"
-                                   class="form-control"
-                                   name="email"
-                                   value="{{ old('email') }}"
-                                   placeholder="enter your email..."
-                                   required autofocus>
-
-
-
-                            <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-
-                            @if ($errors->has('email'))
-                                <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                            @endif
-
-                            <div class="submit-email-button">
-
-                                <button type="submit" class="btn btn-primary">Send Password Reset Link</button>
-
-                            </div>
-
-
-                            <!-- /.col -->
+                            {{ session('status') }}
 
                         </div>
 
+                        @endif
 
+                    <!-- login-logo -->
+
+                    <div class="login-logo">
+
+                        <a href="/"><b>Reset</b> PASSWORD</a>
 
                     </div>
 
+                    <!-- end login-logo -->
 
+                    <!-- login-box-body -->
 
+                    <div class="login-box-body">
 
-                </form>
+                        <p class="login-box-msg">Enter your email for password recovery</p>
 
+                        <!-- email-form -->
 
+                        @include('auth.passwords.email-form')
 
-            </div>
-            <!-- /.login-box-body -->
+                        <!-- end email-form -->
+
+                    </div>
+
+                    <!-- end login-box-body -->
+
+                </div>
+
+                <!-- end login-box -->
+
+            </section>
+
+            <!-- end content section -->
+
         </div>
-        <!-- /.login-box -->
 
-         </section>
-
-        </div>
+        <!-- end container -->
 
     </div>
 
+    <!-- end content-wrapper -->
 
 @endsection
