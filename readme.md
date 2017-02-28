@@ -120,11 +120,10 @@ npm install
 
 To navigate to the admin dashboard, create a user and change their is_admin value to 1 in the database.  This will cause the admin link to appear on the user dash.  Note that admin users are directed to the admin dash upon login.
 
+On the admin panel, check the site pages link for additional pages with working data grids, written in Vue.js.
+
 To use this application, you need a working knowledge of the Laravel framework, with composer installed.  If you are unfamiliar with Laravel, see the [docs](https://laravel.com/docs/5.4).  For those just getting started, check out [Laravel 5.4 For Beginners](https://leanpub.com/laravel-5-4-for-beginners).
 
 ## License
 
 Admin-Dash is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
-
-
-
