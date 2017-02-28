@@ -21,7 +21,7 @@
             @include('admin.components.admin-v1.latest-orders')
 
         </div>
-        <!-- /.col -->
+        <!--  end .col -->
 
         <!-- Right col -->
 

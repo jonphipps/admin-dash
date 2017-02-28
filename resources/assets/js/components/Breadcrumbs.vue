@@ -14,7 +14,7 @@
 
     export default {
 
-        props: ['name', 'plural', 'url']
+        props: ['url', 'name', 'plural']
 
 
     }

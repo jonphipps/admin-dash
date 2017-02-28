@@ -21,13 +21,9 @@
 
             <section class="content-header">
 
-                <ol class="breadcrumb">
-
-                    <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
-                    <li><a href="/widget">Widgets</a></li>
-                    <li class="active">Widgets</li>
-
-                </ol>
+                <breadcrumbs :url="{{ json_encode('/widget') }}"
+                             :name="{{ json_encode('Widget') }}"
+                             :plural="{{ json_encode('Widgets') }}"></breadcrumbs>
 
             </section>
 
