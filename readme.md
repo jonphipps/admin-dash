@@ -14,7 +14,54 @@ If you would like to help support the development of Admin-Dash, there is no don
 
 Follow [the basic instructions](https://help.github.com/articles/fork-a-repo/) for forking a repo from Github.
 
-You will have to create your own .env file for laravel.  You can get an example of a .env from the [master](https://github.com/laravel/laravel/blob/master/.env.example).  
+You will have to create your own .env file for laravel.  You can get an example of a .env from the [master](https://github.com/laravel/laravel/blob/master/.env.example):
+
+~~~~
+
+APP_ENV=local
+APP_KEY=generate-your-app-key
+APP_DEBUG=true
+APP_LOG_LEVEL=debug
+APP_URL=http://localhost
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=
+DB_USERNAME=
+DB_PASSWORD=
+
+BROADCAST_DRIVER=log
+CACHE_DRIVER=file
+SESSION_DRIVER=file
+QUEUE_DRIVER=sync
+
+REDIS_HOST=127.0.0.1
+REDIS_PASSWORD=null
+REDIS_PORT=6379
+
+MAIL_DRIVER=log
+MAIL_HOST="mailtrap.io"
+MAIL_PORT=2525
+MAIL_USERNAME=
+MAIL_PASSWORD=
+MAIL_ENCRYPTION=null
+
+PUSHER_APP_ID=
+PUSHER_APP_KEY=
+PUSHER_APP_SECRET=
+
+FACEBOOK_ID=your-face-book-id
+FACEBOOK_SECRET=your-facebook-secret
+FACEBOOK_URL=http://your-domain.com/auth/facebook/callback
+
+GITHUB_ID=your-github-id
+GITHUB_SECRET=your-github-secret
+GITHUB_URL=http://your-domain.com/auth/github/callback
+
+
+
+~~~~ 
 
 You’ll note it has a blank APP_KEY.  You will need to run the following from the command line:
 
@@ -23,6 +70,8 @@ You’ll note it has a blank APP_KEY.  You will need to run the following from t
 php artisan key:generate
 
 ~~~~
+
+The MAIL_DRIVER is set to log, setting up with mailtrap.io is recommended.
 
 You will also need to add your Github and Facebook .env parameters if you wish to use the social logins:
 
@@ -76,9 +125,6 @@ To use this application, you need a working knowledge of the Laravel framework, 
 ## License
 
 Admin-Dash is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
-
-
-
 
 
 
